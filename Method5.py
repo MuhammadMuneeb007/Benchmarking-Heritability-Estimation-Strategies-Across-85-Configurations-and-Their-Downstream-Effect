@@ -147,37 +147,252 @@ def transform_gemma_data(traindirec, newtrainfilename, models, p, clumpprune, re
     phenotype.to_csv(traindirec + os.sep + trainfilename + ".PHENO",
                      sep="\t", header=['FID', 'IID', 'PHENO'], index=False)
 
-    pcs_train = pd.read_table(
-        traindirec + os.sep + trainfilename + ".eigenvec",
-        sep=r"\s+", header=None,
-        names=["FID", "IID"] + ["PC{}".format(str(i)) for i in range(1, int(p) + 1)]
-    )
-    covariate_train = pd.read_table(
-        traindirec + os.sep + trainfilename + ".cov", sep=r"\s+"
-    )
-    covariate_train.iloc[:, 2:].to_csv(
-        traindirec + os.sep + trainfilename + ".covgemma",
-        header=False, index=False, sep="\t"
-    )
-    covariate_train.fillna(0, inplace=True)
-    print(covariate_train.head())
-    print(len(covariate_train))
-    covariate_train = covariate_train[
-        covariate_train["FID"].isin(pcs_train["FID"].values) &
-        covariate_train["IID"].isin(pcs_train["IID"].values)
-    ]
-    print(len(covariate_train))
+    # ============================================================
+    # FIX: align Method5 GEMMA covariates to exact BFILE samples
+    # ============================================================
 
-    covariate_train['FID'] = covariate_train['FID'].astype(str)
-    pcs_train['FID'] = pcs_train['FID'].astype(str)
-    covariate_train['IID'] = covariate_train['IID'].astype(str)
-    pcs_train['IID'] = pcs_train['IID'].astype(str)
-    covandpcs_train = pd.merge(covariate_train, pcs_train, on=["FID", "IID"])
-    covandpcs_train.to_csv(traindirec + os.sep + trainfilename + ".COV_PCA",
-                           sep="\t", index=False)
+    if clumpprune == "yes":
+        BFILE = traindirec + os.sep + newtrainfilename + ".clumped.pruned"
+    else:
+        BFILE = traindirec + os.sep + newtrainfilename
+
+    # Exact genotype individuals and exact order used by GEMMA
+    bfile_fam = pd.read_csv(
+        BFILE + ".fam",
+        sep=r"\s+",
+        header=None,
+        names=["FID", "IID", "Father", "Mother", "Sex", "Phenotype"]
+    )
+
+    bfile_fam["FID"] = bfile_fam["FID"].astype(str)
+    bfile_fam["IID"] = bfile_fam["IID"].astype(str)
+
+    bfile_ids = bfile_fam[["FID", "IID"]].copy()
+    bfile_ids["_ORDER"] = range(len(bfile_ids))
+
+    if bfile_ids.duplicated(["FID", "IID"]).any():
+        raise RuntimeError(
+            "Duplicate FID/IID detected in " + BFILE + ".fam"
+        )
+
+    # ------------------------------------------------------------
+    # PCA
+    # ------------------------------------------------------------
+    pcs_train = pd.read_csv(
+        traindirec + os.sep + trainfilename + ".eigenvec",
+        sep=r"\s+",
+        header=None,
+        names=["FID", "IID"] + [
+            "PC{}".format(str(i))
+            for i in range(1, int(p) + 1)
+        ]
+    )
+
+    pcs_train["FID"] = pcs_train["FID"].astype(str)
+    pcs_train["IID"] = pcs_train["IID"].astype(str)
+
+    if pcs_train.duplicated(["FID", "IID"]).any():
+        raise RuntimeError(
+            "Duplicate FID/IID detected in PCA file"
+        )
+
+    # ------------------------------------------------------------
+    # Covariates
+    # ------------------------------------------------------------
+    cov_path = (
+        traindirec
+        + os.sep
+        + trainfilename
+        + ".cov"
+    )
+
+    covariate_train = pd.read_csv(
+        cov_path,
+        sep=r"\s+"
+    )
+
+    # Fallback for comma-separated covariate files
+    if (
+        "FID" not in covariate_train.columns
+        or "IID" not in covariate_train.columns
+    ):
+        covariate_train = pd.read_csv(
+            cov_path,
+            sep=","
+        )
+
+    if (
+        "FID" not in covariate_train.columns
+        or "IID" not in covariate_train.columns
+    ):
+        raise RuntimeError(
+            "FID/IID columns not found in " + cov_path
+        )
+
+    covariate_train["FID"] = (
+        covariate_train["FID"].astype(str)
+    )
+    covariate_train["IID"] = (
+        covariate_train["IID"].astype(str)
+    )
+
+    if covariate_train.duplicated(
+        ["FID", "IID"]
+    ).any():
+        raise RuntimeError(
+            "Duplicate FID/IID detected in " + cov_path
+        )
+
+    # ------------------------------------------------------------
+    # Exact BFILE -> covariate alignment
+    # ------------------------------------------------------------
+    covariate_aligned = pd.merge(
+        bfile_ids,
+        covariate_train,
+        on=["FID", "IID"],
+        how="left",
+        sort=False,
+        validate="one_to_one",
+        indicator=True
+    )
+
+    missing_cov = (
+        covariate_aligned["_merge"] != "both"
+    )
+
+    if missing_cov.any():
+        missing_ids = covariate_aligned.loc[
+            missing_cov,
+            ["FID", "IID"]
+        ]
+
+        raise RuntimeError(
+            "Missing covariates for "
+            + str(len(missing_ids))
+            + " genotype individuals:\n"
+            + missing_ids.head().to_string(index=False)
+        )
+
+    covariate_aligned = (
+        covariate_aligned
+        .drop(columns=["_merge"])
+        .sort_values("_ORDER")
+        .drop(columns=["_ORDER"])
+        .reset_index(drop=True)
+    )
+
+    covariate_aligned.fillna(
+        0,
+        inplace=True
+    )
+
+    if len(covariate_aligned) != len(bfile_fam):
+        raise RuntimeError(
+            "Covariate sample count does not match genotype sample count"
+        )
+
+    # GEMMA covariate matrix:
+    # no FID/IID columns, one row for each BFILE individual
+    covariate_aligned.iloc[:, 2:].to_csv(
+        traindirec
+        + os.sep
+        + trainfilename
+        + ".covgemma",
+        header=False,
+        index=False,
+        sep="\t"
+    )
+
+    # ------------------------------------------------------------
+    # Exact BFILE -> PCA alignment
+    # ------------------------------------------------------------
+    pcs_aligned = pd.merge(
+        bfile_ids,
+        pcs_train,
+        on=["FID", "IID"],
+        how="left",
+        sort=False,
+        validate="one_to_one",
+        indicator=True
+    )
+
+    missing_pca = (
+        pcs_aligned["_merge"] != "both"
+    )
+
+    if missing_pca.any():
+        missing_ids = pcs_aligned.loc[
+            missing_pca,
+            ["FID", "IID"]
+        ]
+
+        raise RuntimeError(
+            "Missing PCA values for "
+            + str(len(missing_ids))
+            + " genotype individuals:\n"
+            + missing_ids.head().to_string(index=False)
+        )
+
+    pcs_aligned = (
+        pcs_aligned
+        .drop(columns=["_merge"])
+        .sort_values("_ORDER")
+        .drop(columns=["_ORDER"])
+        .reset_index(drop=True)
+    )
+
+    if len(pcs_aligned) != len(bfile_fam):
+        raise RuntimeError(
+            "PCA sample count does not match genotype sample count"
+        )
+
+    # ------------------------------------------------------------
+    # Covariates + PCA
+    # ------------------------------------------------------------
+    covandpcs_train = pd.merge(
+        covariate_aligned,
+        pcs_aligned,
+        on=["FID", "IID"],
+        how="left",
+        sort=False,
+        validate="one_to_one"
+    )
+
+    if len(covandpcs_train) != len(bfile_fam):
+        raise RuntimeError(
+            "Covariate+PCA sample count does not match genotype sample count"
+        )
+
+    if covandpcs_train.iloc[:, 2:].isnull().any().any():
+        raise RuntimeError(
+            "Missing values found after covariate/PCA alignment"
+        )
+
+    covandpcs_train.to_csv(
+        traindirec
+        + os.sep
+        + trainfilename
+        + ".COV_PCA",
+        sep="\t",
+        index=False
+    )
+
     covandpcs_train.iloc[:, 2:].to_csv(
-        traindirec + os.sep + trainfilename + ".COV_PCAgemma",
-        header=False, index=False, sep="\t"
+        traindirec
+        + os.sep
+        + trainfilename
+        + ".COV_PCAgemma",
+        header=False,
+        index=False,
+        sep="\t"
+    )
+
+    print(
+        "METHOD5 SAMPLE CHECK:",
+        "genotype N =", len(bfile_fam),
+        "| covariate N =", len(covariate_aligned),
+        "| PCA N =", len(pcs_aligned),
+        "| covariate+PCA N =", len(covandpcs_train)
     )
 
     if relatedmatrix == "1":

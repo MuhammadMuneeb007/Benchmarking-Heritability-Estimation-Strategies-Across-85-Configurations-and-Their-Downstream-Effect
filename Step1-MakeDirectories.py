@@ -60,7 +60,6 @@ if detect_genome_build(phenotype) == "38":
     os.system("cp genotypes.bim38 " + phenotype + os.sep + phenotype + ".bim")
      
 #exit(0)
-
 import os
 import pandas as pd
 

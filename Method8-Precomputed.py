@@ -40,6 +40,15 @@ def specified_single_characters(row, cols):
 df_transformed = df_transformed[
     df_transformed.apply(lambda row: specified_single_characters(row, columns_to_check), axis=1)
 ]
+
+# FIX 1: Drop duplicate Predictor (CHR:BP) entries — LDAK errors out if a
+# predictor appears more than once in the summary-statistics file.
+before = len(df_transformed)
+df_transformed = df_transformed.drop_duplicates(subset='Predictor', keep='first')
+after = len(df_transformed)
+if before != after:
+    print(f"Warning: dropped {before - after} duplicate CHR:BP predictor(s) from .ldak file.")
+
 df_transformed.to_csv(filedirec + os.sep + filedirec + ".ldak", sep="\t", index=False)
 
 
@@ -128,11 +137,21 @@ def transform_ldak_data(traindirec, newtrainfilename, p, precomputedfile,
         "--check-sums", "NO"
     ]
     print(" ".join(command))
-    subprocess.run(command)
+    result = subprocess.run(command)
 
-    pve_estimate = readpve(traindirec)
-    pve_se = readpve_se(traindirec)
-    variants = readvariants(traindirec)
+    # FIX 2: Check that LDAK actually succeeded before reading its output.
+    # If the command failed (non-zero exit code) or the output file is missing,
+    # record NaN values and continue instead of crashing.
+    if result.returncode != 0 or not os.path.exists(hers_file):
+        print(f"Warning: LDAK failed or did not produce {hers_file} "
+              f"(return code {result.returncode}). Skipping this configuration.")
+        pve_estimate = np.nan
+        pve_se = np.nan
+        variants = np.nan
+    else:
+        pve_estimate = readpve(traindirec)
+        pve_se = readpve_se(traindirec)
+        variants = readvariants(traindirec)
 
     print("Heritability:", pve_estimate, "SE:", pve_se, "Variants:", variants)
 
