@@ -582,3 +582,13 @@ See [Method10.md](Method10.md) for the detailed results
 
 
 
+
+## Associated Publication
+
+**Muneeb, M. and Ascher, D. B. (2026).** Benchmarking Heritability Estimation Strategies Across 86 Configurations and Their Downstream Effect on Polygenic Risk Score Performance. arXiv:2604.02394.
+
+Paper: https://arxiv.org/abs/2604.02394
+
+DOI: https://doi.org/10.48550/arXiv.2604.02394
+
+Please use CITATION.cff or CITATION.bib when citing this repository.

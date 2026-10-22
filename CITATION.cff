@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated paper."
+title: "Benchmarking Heritability Estimation Strategies Across 86 Configurations and Their Downstream Effect on Polygenic Risk Score Performance"
+type: software
+authors:
+  - family-names: Muneeb
+    given-names: Muhammad
+    orcid: "https://orcid.org/0000-0002-6506-4430"
+  - family-names: Ascher
+    given-names: David B.
+repository-code: "https://github.com/MuhammadMuneeb007/Benchmarking-Heritability-Estimation-Strategies-Across-85-Configurations-and-Their-Downstream-Effect"
+preferred-citation:
+  type: article
+  title: "Benchmarking Heritability Estimation Strategies Across 86 Configurations and Their Downstream Effect on Polygenic Risk Score Performance"
+  authors:
+    - family-names: Muneeb
+      given-names: Muhammad
+    - family-names: Ascher
+      given-names: David B.
+  year: 2026
+  doi: "10.48550/arXiv.2604.02394"
+  url: "https://arxiv.org/abs/2604.02394"

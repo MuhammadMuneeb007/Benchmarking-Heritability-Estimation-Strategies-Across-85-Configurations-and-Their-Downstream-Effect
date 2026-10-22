@@ -1,0 +1,114 @@
+# ---------------------------------------------------------------------------
+# Participant-level data — NEVER commit (UK Biobank access conditions)
+# ---------------------------------------------------------------------------
+genotypes.*
+phenotype_file.txt
+*.bed
+*.bim
+*.fam
+*.cov
+*.covOLD
+*.height
+*.heightOLD
+*.PHENO
+*.COV_PCA
+*.covgemma
+*.COV_PCAgemma
+*.eigenvec
+*.eigenval
+PeopleWithPhenotype.txt
+Method23_selected_fam_files.csv
+
+# Real phenotype directories (genotypes, folds, per-fold results)
+asthma/
+body_mass_index_bmi/
+depression/
+gastro_oesophageal_reflux_gord_gastric_reflux/
+high_cholesterol/
+hypertension/
+hypothyroidism_myxoedema/
+irritable_bowel_syndrome/
+migraine/
+osteoarthritis/
+SampleData1/
+
+# Simulated datasets (regenerate with Step1-Simulate.py)
+Sim[0-9][0-9][0-9]/
+_simulation_shared/
+
+# ---------------------------------------------------------------------------
+# Third-party executables and reference panels (download separately)
+# ---------------------------------------------------------------------------
+/plink
+/gcta
+/gemma
+/DPR
+/ldak
+LDSCFILES/
+LDAKFILES/
+LDSCFILES_SIM/
+LDAKFILES_SIM/
+map_hm3_ldpred2.rds
+
+# ---------------------------------------------------------------------------
+# Tool outputs, caches and logs
+# ---------------------------------------------------------------------------
+output/
+LDSC/
+LDSC_SIM/
+LDpred2-GLOBAL-CACHE/
+logs/
+job.*.out
+job.*.err
+*.log
+*_terminal.txt
+
+# Intermediate GWAS formats written by Method*.py into each dataset folder
+SBLUPGWAS.ma
+*.gemma.txt
+*.ldsc.txt
+*.ldak
+
+# Analysis output folders (archive selected files in results/ instead)
+/FinalAnalysis_Liability/
+/FinalAnalysis0[2-9]/
+/FinalAnalysis04-XX/
+/FinalAnalysis06-UncertaintyReliability/
+/FinalAnalysis07-HorizontalUncertainty/
+/FinalAnalysis08-PrimaryFigures-Uncertainty/
+/FinalFigures-Heritability-Uncertainty/
+
+# ---------------------------------------------------------------------------
+# Backups and editor / Python clutter
+# ---------------------------------------------------------------------------
+*.before_sim_update
+*.before_BMI_PRS_fix.csv
+*.bak
+*~
+~$*
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.Rhistory
+.RData
+.DS_Store
+
+# Keep the archived results even though their sources are ignored above
+!results/
+!results/**
+__pycache__/
+*.pyc
+.env
+.venv/
+n8n-env/
+*.bed
+*.bim
+*.fam
+*.pgen
+*.pvar
+*.psam
+genotypes.*
+phenotype_file.txt
+Sim[0-9][0-9][0-9]/
+*.log
+.DS_Store
