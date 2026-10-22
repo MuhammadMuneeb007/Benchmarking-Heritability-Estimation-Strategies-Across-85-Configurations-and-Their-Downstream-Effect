@@ -82,6 +82,8 @@ Depending on the installed software, additional environments may be needed for i
 
 ### 1.3 Required external tools
 
+**Step-by-step download and placement instructions:** [External software and reference resources — official download links, required filenames, commands and directory layouts](REFERENCE_RESOURCES.md). This guide specifies where to obtain PLINK, GCTA, GEMMA, DPR, LDSC, LDAK, LDpred2 and the external LD-score/tagging files expected by the repository. The third-party datasets are linked rather than mirrored in GitHub.
+
 | Tool | Purpose | Reference |
 |---|---|---|
 | PLINK 1.9 | Genotype handling, QC, clumping, pruning, PCA | [PLINK](https://www.cog-genomics.org/plink/) |
@@ -579,7 +581,7 @@ eur_w_ld_chr
 
 as reference LD scores and regression weights.
 
-Reference resources must be available under the directory structure expected by the code:
+Reference resources must be available under the directory structure expected by the code (see [reference download and placement instructions](REFERENCE_RESOURCES.md#2-european-ldsc-ld-score-reference-files-empirical-method-7)):
 
 ```text
 LDSCFILES/
@@ -632,7 +634,7 @@ python Method8-Precomputed-Sim.py Sim001 0
 
 The filenames retain the original implementation naming, although this workflow represents **Method 9 in the benchmark table**.
 
-Real-data tagging inputs are expected under:
+Real-data tagging inputs are expected under (see [official provider links and download commands](REFERENCE_RESOURCES.md#3-ldak-precomputed-tagging-files-empirical-method-9)):
 
 ```text
 LDAKFILES/
@@ -666,7 +668,7 @@ sim_alpha_0.0.tagging
 sim_alpha_-0.5.tagging
 ```
 
-These reference files are external workflow dependencies and are not included in the public repository.
+These reference files are external workflow dependencies and are not included in the public repository. See [simulation reference generation and expected paths](REFERENCE_RESOURCES.md#4-simulation-specific-reference-resources-not-distributed).
 
 ### 5.12 Method 10 — LDSC with genotype-derived reference
 
@@ -1528,7 +1530,7 @@ Users should distinguish three levels of access:
 
 **Simulations.** The simulation-generation source and recorded design parameters are public. Full simulation reruns require the relevant simulation packages, PLINK and sufficient computational resources.
 
-**External reference resources.** Some LDSC and LDAK configurations require precomputed LD scores or tagging files, including the simulated `Reference5000` resources. Their exact preparation and provenance must be supplied to reproduce those configurations independently.
+**External reference resources.** Some LDSC and LDAK configurations require precomputed LD scores or tagging files, including simulated `Reference5000` resources. The [reference-resource guide](REFERENCE_RESOURCES.md) links to the official software and data sources and documents exact directory placement and generation options. Neither human-reference downloads nor simulated precomputed files are redistributed here. An exact numerical replication also requires matching the specific reference panel, variant set, software version and construction settings used for the original analyses.
 
 **Intermediate results.** The repository does not include all per-fold heritability and PRS `Results.csv` files. Accordingly, scripts that scan those underlying outputs must be run after generating or restoring the corresponding intermediate files.
 
