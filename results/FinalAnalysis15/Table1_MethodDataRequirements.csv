@@ -1,0 +1,11 @@
+MethodNumber,Method,Script,ModelConfigurations,NeedsGWAS,NeedsPhenotypedGenotypes,NeedsReferenceGenotypes,NeedsExternalLD,NeedsPrecomputedTagging,InputDescription,CovariatesPCA,DataTypeClass
+1,LDpred-2-Heritability,Method1.py,4,True,False,True,False,False,GWAS + genotype-derived LD / variant matching,No,GWAS + genotype-derived reference
+2,GCTA-Heritability,Method2.py,6,False,True,False,False,False,Genotypes + phenotype; GRM / REML,Optional,Genotype + phenotype
+3,Gemma1-Heritability,Method3.py,24,False,True,False,False,False,Genotypes + phenotype; GEMMA HE / REML,Optional,Genotype + phenotype
+4,Gemma2-Heritability,Method4.py,6,True,True,False,False,False,Genotypes + phenotype + GWAS; GEMMA HE,Optional,GWAS + genotype + phenotype
+5,Gemma-LDSC-Heritability,Method5.py,3,True,True,False,False,False,Genotypes + phenotype + GWAS; derived LD scores,Optional,GWAS + genotype + phenotype
+6,DPR-Gemma-Heritability,Method6.py,24,False,True,False,False,False,Genotypes + phenotype; DPR GRM + GEMMA,Optional,Genotype + phenotype
+7,LDSC-Heritability,Method7.py,4,True,False,False,True,False,GWAS + external LD scores and regression weights,No,GWAS + external LD
+8,LDAK-Calculated-Heritability,Method8-Calculated.py,7,True,False,True,False,False,GWAS + genotypes to calculate tagging,No,GWAS + genotype-derived reference
+9,LDAK-Precomputed-Heritability,Method8-Precomputed.py,6,True,False,False,False,True,GWAS + precomputed LDAK tagging,No,GWAS + precomputed tagging
+10,LDSC-Genotype-Heritability,Method10.py,1,True,False,True,False,False,GWAS + genotypes to calculate LD scores,No,GWAS + genotype-derived reference

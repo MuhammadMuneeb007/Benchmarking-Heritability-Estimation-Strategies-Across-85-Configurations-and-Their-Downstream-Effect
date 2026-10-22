@@ -1,0 +1,16 @@
+DataScenario,GWAS,PhenotypedGenotypes,ReferenceGenotypes,ExternalLDScoresWeights,PrecomputedLDAKTagging,FeasibleMethodCount,FeasibleConfigUpperBound,MethodNumbers,FeasibleMethods
+GWAS summary statistics only,1,0,0,0,0,0,0,NONE,NONE
+GWAS + external LD scores/weights,1,0,0,1,0,1,4,M7,LDSC-Heritability
+GWAS + precomputed LDAK tagging,1,0,0,0,1,1,6,M9,LDAK-Precomputed-Heritability
+GWAS + external LD + LDAK tagging,1,0,0,1,1,2,10,"M7, M9",LDSC-Heritability; LDAK-Precomputed-Heritability
+GWAS + reference genotypes (no phenotype),1,0,1,0,0,3,12,"M1, M8, M10",LDpred-2-Heritability; LDAK-Calculated-Heritability; LDSC-Genotype-Heritability
+GWAS + reference genotypes + external LD,1,0,1,1,0,4,16,"M1, M7, M8, M10",LDpred-2-Heritability; LDSC-Heritability; LDAK-Calculated-Heritability; LDSC-Genotype-Heritability
+GWAS + reference genotypes + LDAK tagging,1,0,1,0,1,4,18,"M1, M8, M9, M10",LDpred-2-Heritability; LDAK-Calculated-Heritability; LDAK-Precomputed-Heritability; LDSC-Genotype-Heritability
+Genotype + phenotype only,0,1,0,0,0,3,54,"M2, M3, M6",GCTA-Heritability; Gemma1-Heritability; DPR-Gemma-Heritability
+Genotype + phenotype + external LD,0,1,0,1,0,3,54,"M2, M3, M6",GCTA-Heritability; Gemma1-Heritability; DPR-Gemma-Heritability
+Genotype + phenotype + LDAK tagging,0,1,0,0,1,3,54,"M2, M3, M6",GCTA-Heritability; Gemma1-Heritability; DPR-Gemma-Heritability
+Genotype + phenotype + GWAS,1,1,0,0,0,8,75,"M1, M2, M3, M4, M5, M6, M8, M10",LDpred-2-Heritability; GCTA-Heritability; Gemma1-Heritability; Gemma2-Heritability; Gemma-LDSC-Heritability; DPR-Gemma-Heritability; LDAK-Calculated-Heritability; LDSC-Genotype-Heritability
+Genotype + phenotype + GWAS + external LD,1,1,0,1,0,9,79,"M1, M2, M3, M4, M5, M6, M7, M8, M10",LDpred-2-Heritability; GCTA-Heritability; Gemma1-Heritability; Gemma2-Heritability; Gemma-LDSC-Heritability; DPR-Gemma-Heritability; LDSC-Heritability; LDAK-Calculated-Heritability; LDSC-Genotype-Heritability
+Genotype + phenotype + GWAS + tagging,1,1,0,0,1,9,81,"M1, M2, M3, M4, M5, M6, M8, M9, M10",LDpred-2-Heritability; GCTA-Heritability; Gemma1-Heritability; Gemma2-Heritability; Gemma-LDSC-Heritability; DPR-Gemma-Heritability; LDAK-Calculated-Heritability; LDAK-Precomputed-Heritability; LDSC-Genotype-Heritability
+Genotype + phenotype + GWAS + LD + tagging,1,1,0,1,1,10,85,"M1, M2, M3, M4, M5, M6, M7, M8, M9, M10",LDpred-2-Heritability; GCTA-Heritability; Gemma1-Heritability; Gemma2-Heritability; Gemma-LDSC-Heritability; DPR-Gemma-Heritability; LDSC-Heritability; LDAK-Calculated-Heritability; LDAK-Precomputed-Heritability; LDSC-Genotype-Heritability
+Reference genotypes only (no GWAS),0,0,1,0,0,0,0,NONE,NONE

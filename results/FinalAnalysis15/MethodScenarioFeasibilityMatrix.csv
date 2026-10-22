@@ -1,0 +1,151 @@
+DataScenario,MethodNumber,Method,Feasible
+GWAS summary statistics only,1,LDpred-2-Heritability,False
+GWAS summary statistics only,2,GCTA-Heritability,False
+GWAS summary statistics only,3,Gemma1-Heritability,False
+GWAS summary statistics only,4,Gemma2-Heritability,False
+GWAS summary statistics only,5,Gemma-LDSC-Heritability,False
+GWAS summary statistics only,6,DPR-Gemma-Heritability,False
+GWAS summary statistics only,7,LDSC-Heritability,False
+GWAS summary statistics only,8,LDAK-Calculated-Heritability,False
+GWAS summary statistics only,9,LDAK-Precomputed-Heritability,False
+GWAS summary statistics only,10,LDSC-Genotype-Heritability,False
+GWAS + external LD scores/weights,1,LDpred-2-Heritability,False
+GWAS + external LD scores/weights,2,GCTA-Heritability,False
+GWAS + external LD scores/weights,3,Gemma1-Heritability,False
+GWAS + external LD scores/weights,4,Gemma2-Heritability,False
+GWAS + external LD scores/weights,5,Gemma-LDSC-Heritability,False
+GWAS + external LD scores/weights,6,DPR-Gemma-Heritability,False
+GWAS + external LD scores/weights,7,LDSC-Heritability,True
+GWAS + external LD scores/weights,8,LDAK-Calculated-Heritability,False
+GWAS + external LD scores/weights,9,LDAK-Precomputed-Heritability,False
+GWAS + external LD scores/weights,10,LDSC-Genotype-Heritability,False
+GWAS + precomputed LDAK tagging,1,LDpred-2-Heritability,False
+GWAS + precomputed LDAK tagging,2,GCTA-Heritability,False
+GWAS + precomputed LDAK tagging,3,Gemma1-Heritability,False
+GWAS + precomputed LDAK tagging,4,Gemma2-Heritability,False
+GWAS + precomputed LDAK tagging,5,Gemma-LDSC-Heritability,False
+GWAS + precomputed LDAK tagging,6,DPR-Gemma-Heritability,False
+GWAS + precomputed LDAK tagging,7,LDSC-Heritability,False
+GWAS + precomputed LDAK tagging,8,LDAK-Calculated-Heritability,False
+GWAS + precomputed LDAK tagging,9,LDAK-Precomputed-Heritability,True
+GWAS + precomputed LDAK tagging,10,LDSC-Genotype-Heritability,False
+GWAS + external LD + LDAK tagging,1,LDpred-2-Heritability,False
+GWAS + external LD + LDAK tagging,2,GCTA-Heritability,False
+GWAS + external LD + LDAK tagging,3,Gemma1-Heritability,False
+GWAS + external LD + LDAK tagging,4,Gemma2-Heritability,False
+GWAS + external LD + LDAK tagging,5,Gemma-LDSC-Heritability,False
+GWAS + external LD + LDAK tagging,6,DPR-Gemma-Heritability,False
+GWAS + external LD + LDAK tagging,7,LDSC-Heritability,True
+GWAS + external LD + LDAK tagging,8,LDAK-Calculated-Heritability,False
+GWAS + external LD + LDAK tagging,9,LDAK-Precomputed-Heritability,True
+GWAS + external LD + LDAK tagging,10,LDSC-Genotype-Heritability,False
+GWAS + reference genotypes (no phenotype),1,LDpred-2-Heritability,True
+GWAS + reference genotypes (no phenotype),2,GCTA-Heritability,False
+GWAS + reference genotypes (no phenotype),3,Gemma1-Heritability,False
+GWAS + reference genotypes (no phenotype),4,Gemma2-Heritability,False
+GWAS + reference genotypes (no phenotype),5,Gemma-LDSC-Heritability,False
+GWAS + reference genotypes (no phenotype),6,DPR-Gemma-Heritability,False
+GWAS + reference genotypes (no phenotype),7,LDSC-Heritability,False
+GWAS + reference genotypes (no phenotype),8,LDAK-Calculated-Heritability,True
+GWAS + reference genotypes (no phenotype),9,LDAK-Precomputed-Heritability,False
+GWAS + reference genotypes (no phenotype),10,LDSC-Genotype-Heritability,True
+GWAS + reference genotypes + external LD,1,LDpred-2-Heritability,True
+GWAS + reference genotypes + external LD,2,GCTA-Heritability,False
+GWAS + reference genotypes + external LD,3,Gemma1-Heritability,False
+GWAS + reference genotypes + external LD,4,Gemma2-Heritability,False
+GWAS + reference genotypes + external LD,5,Gemma-LDSC-Heritability,False
+GWAS + reference genotypes + external LD,6,DPR-Gemma-Heritability,False
+GWAS + reference genotypes + external LD,7,LDSC-Heritability,True
+GWAS + reference genotypes + external LD,8,LDAK-Calculated-Heritability,True
+GWAS + reference genotypes + external LD,9,LDAK-Precomputed-Heritability,False
+GWAS + reference genotypes + external LD,10,LDSC-Genotype-Heritability,True
+GWAS + reference genotypes + LDAK tagging,1,LDpred-2-Heritability,True
+GWAS + reference genotypes + LDAK tagging,2,GCTA-Heritability,False
+GWAS + reference genotypes + LDAK tagging,3,Gemma1-Heritability,False
+GWAS + reference genotypes + LDAK tagging,4,Gemma2-Heritability,False
+GWAS + reference genotypes + LDAK tagging,5,Gemma-LDSC-Heritability,False
+GWAS + reference genotypes + LDAK tagging,6,DPR-Gemma-Heritability,False
+GWAS + reference genotypes + LDAK tagging,7,LDSC-Heritability,False
+GWAS + reference genotypes + LDAK tagging,8,LDAK-Calculated-Heritability,True
+GWAS + reference genotypes + LDAK tagging,9,LDAK-Precomputed-Heritability,True
+GWAS + reference genotypes + LDAK tagging,10,LDSC-Genotype-Heritability,True
+Genotype + phenotype only,1,LDpred-2-Heritability,False
+Genotype + phenotype only,2,GCTA-Heritability,True
+Genotype + phenotype only,3,Gemma1-Heritability,True
+Genotype + phenotype only,4,Gemma2-Heritability,False
+Genotype + phenotype only,5,Gemma-LDSC-Heritability,False
+Genotype + phenotype only,6,DPR-Gemma-Heritability,True
+Genotype + phenotype only,7,LDSC-Heritability,False
+Genotype + phenotype only,8,LDAK-Calculated-Heritability,False
+Genotype + phenotype only,9,LDAK-Precomputed-Heritability,False
+Genotype + phenotype only,10,LDSC-Genotype-Heritability,False
+Genotype + phenotype + external LD,1,LDpred-2-Heritability,False
+Genotype + phenotype + external LD,2,GCTA-Heritability,True
+Genotype + phenotype + external LD,3,Gemma1-Heritability,True
+Genotype + phenotype + external LD,4,Gemma2-Heritability,False
+Genotype + phenotype + external LD,5,Gemma-LDSC-Heritability,False
+Genotype + phenotype + external LD,6,DPR-Gemma-Heritability,True
+Genotype + phenotype + external LD,7,LDSC-Heritability,False
+Genotype + phenotype + external LD,8,LDAK-Calculated-Heritability,False
+Genotype + phenotype + external LD,9,LDAK-Precomputed-Heritability,False
+Genotype + phenotype + external LD,10,LDSC-Genotype-Heritability,False
+Genotype + phenotype + LDAK tagging,1,LDpred-2-Heritability,False
+Genotype + phenotype + LDAK tagging,2,GCTA-Heritability,True
+Genotype + phenotype + LDAK tagging,3,Gemma1-Heritability,True
+Genotype + phenotype + LDAK tagging,4,Gemma2-Heritability,False
+Genotype + phenotype + LDAK tagging,5,Gemma-LDSC-Heritability,False
+Genotype + phenotype + LDAK tagging,6,DPR-Gemma-Heritability,True
+Genotype + phenotype + LDAK tagging,7,LDSC-Heritability,False
+Genotype + phenotype + LDAK tagging,8,LDAK-Calculated-Heritability,False
+Genotype + phenotype + LDAK tagging,9,LDAK-Precomputed-Heritability,False
+Genotype + phenotype + LDAK tagging,10,LDSC-Genotype-Heritability,False
+Genotype + phenotype + GWAS,1,LDpred-2-Heritability,True
+Genotype + phenotype + GWAS,2,GCTA-Heritability,True
+Genotype + phenotype + GWAS,3,Gemma1-Heritability,True
+Genotype + phenotype + GWAS,4,Gemma2-Heritability,True
+Genotype + phenotype + GWAS,5,Gemma-LDSC-Heritability,True
+Genotype + phenotype + GWAS,6,DPR-Gemma-Heritability,True
+Genotype + phenotype + GWAS,7,LDSC-Heritability,False
+Genotype + phenotype + GWAS,8,LDAK-Calculated-Heritability,True
+Genotype + phenotype + GWAS,9,LDAK-Precomputed-Heritability,False
+Genotype + phenotype + GWAS,10,LDSC-Genotype-Heritability,True
+Genotype + phenotype + GWAS + external LD,1,LDpred-2-Heritability,True
+Genotype + phenotype + GWAS + external LD,2,GCTA-Heritability,True
+Genotype + phenotype + GWAS + external LD,3,Gemma1-Heritability,True
+Genotype + phenotype + GWAS + external LD,4,Gemma2-Heritability,True
+Genotype + phenotype + GWAS + external LD,5,Gemma-LDSC-Heritability,True
+Genotype + phenotype + GWAS + external LD,6,DPR-Gemma-Heritability,True
+Genotype + phenotype + GWAS + external LD,7,LDSC-Heritability,True
+Genotype + phenotype + GWAS + external LD,8,LDAK-Calculated-Heritability,True
+Genotype + phenotype + GWAS + external LD,9,LDAK-Precomputed-Heritability,False
+Genotype + phenotype + GWAS + external LD,10,LDSC-Genotype-Heritability,True
+Genotype + phenotype + GWAS + tagging,1,LDpred-2-Heritability,True
+Genotype + phenotype + GWAS + tagging,2,GCTA-Heritability,True
+Genotype + phenotype + GWAS + tagging,3,Gemma1-Heritability,True
+Genotype + phenotype + GWAS + tagging,4,Gemma2-Heritability,True
+Genotype + phenotype + GWAS + tagging,5,Gemma-LDSC-Heritability,True
+Genotype + phenotype + GWAS + tagging,6,DPR-Gemma-Heritability,True
+Genotype + phenotype + GWAS + tagging,7,LDSC-Heritability,False
+Genotype + phenotype + GWAS + tagging,8,LDAK-Calculated-Heritability,True
+Genotype + phenotype + GWAS + tagging,9,LDAK-Precomputed-Heritability,True
+Genotype + phenotype + GWAS + tagging,10,LDSC-Genotype-Heritability,True
+Genotype + phenotype + GWAS + LD + tagging,1,LDpred-2-Heritability,True
+Genotype + phenotype + GWAS + LD + tagging,2,GCTA-Heritability,True
+Genotype + phenotype + GWAS + LD + tagging,3,Gemma1-Heritability,True
+Genotype + phenotype + GWAS + LD + tagging,4,Gemma2-Heritability,True
+Genotype + phenotype + GWAS + LD + tagging,5,Gemma-LDSC-Heritability,True
+Genotype + phenotype + GWAS + LD + tagging,6,DPR-Gemma-Heritability,True
+Genotype + phenotype + GWAS + LD + tagging,7,LDSC-Heritability,True
+Genotype + phenotype + GWAS + LD + tagging,8,LDAK-Calculated-Heritability,True
+Genotype + phenotype + GWAS + LD + tagging,9,LDAK-Precomputed-Heritability,True
+Genotype + phenotype + GWAS + LD + tagging,10,LDSC-Genotype-Heritability,True
+Reference genotypes only (no GWAS),1,LDpred-2-Heritability,False
+Reference genotypes only (no GWAS),2,GCTA-Heritability,False
+Reference genotypes only (no GWAS),3,Gemma1-Heritability,False
+Reference genotypes only (no GWAS),4,Gemma2-Heritability,False
+Reference genotypes only (no GWAS),5,Gemma-LDSC-Heritability,False
+Reference genotypes only (no GWAS),6,DPR-Gemma-Heritability,False
+Reference genotypes only (no GWAS),7,LDSC-Heritability,False
+Reference genotypes only (no GWAS),8,LDAK-Calculated-Heritability,False
+Reference genotypes only (no GWAS),9,LDAK-Precomputed-Heritability,False
+Reference genotypes only (no GWAS),10,LDSC-Genotype-Heritability,False
