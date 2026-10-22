@@ -280,7 +280,7 @@ These files provide the input for individual-level heritability estimators and d
 
 The main objective is to estimate heritability using the designated training data and subsequently assess PRS prediction on held-out data.
 
-**Important:** The production working directory also contains a separate `Step2-PerformQualityControlsBinary.py`. That script is not currently included in the public repository. Therefore, this README documents the publicly available `Step2-PerformQualityControls.py`; reproducing results generated with the separate binary-specific QC version requires that exact implementation and its settings.
+**One QC script for binary and continuous phenotypes.** `Step2-PerformQualityControls.py` is used for both phenotype types; no separate binary-specific QC script is required for the workflow documented here. The script uses stratified five-fold cross-validation when the post-QC PLINK `.fam` phenotype values are exactly `{1, 2}` (binary case/control coding) and standard shuffled five-fold cross-validation otherwise (continuous phenotypes). Both branches use `random_state=42`. The GWAS `MAF > 0.01` and `INFO > 0.8` filter line is currently commented out in this script, so apply the relevant GWAS quality filters to the input summary statistics upstream if those thresholds are required.
 
 ---
 
@@ -471,7 +471,9 @@ The same core configuration framework is applied across relevant datasets and cr
 
 **Total for the empirical design: 85 configurations.**
 
-The simulated design uses 82 corresponding configurations, because the simulated version of Method 7 uses one reference configuration instead of the four empirical reference/weight combinations.
+**Configuration accounting: 85 empirical → 82 nominal simulated → 78 evaluated simulated configurations.** The empirical benchmark contains 85 distinct configurations across 10 heritability method groups. For simulation, `Method7-Sim.py` uses one fixed LDSC simulation reference (`LDSCFILES_SIM/Reference5000/`), whereas the empirical `Method7.py` evaluates four combinations of LDSC reference LD scores and regression weights. This reduces the nominal simulation configuration grid by three, from 85 to **82**.
+
+The archived **known-truth simulation accuracy comparisons evaluate 78 configurations across nine method groups**, not all 82 nominal combinations. The remaining four correspond to the `LDpred-2-Heritability` group, which has four configurations in the empirical benchmark but **no evaluable entries in the archived simulated accuracy summaries**. They are therefore absent from the 78-configuration comparisons; this should not be interpreted as evidence that those configurations failed or as an estimate of their simulated accuracy. The Friedman tests and related paired configuration rankings described in the manuscript and Supplementary Material 2 use these **78 evaluated configurations**. See [`results/FinalAnalysis04-XX/FinalAnalysis04-XX_configuration_summary.csv`](results/FinalAnalysis04-XX/FinalAnalysis04-XX_configuration_summary.csv) and [`results/FinalAnalysis04-XX/FinalAnalysis04-XX_method_summary.csv`](results/FinalAnalysis04-XX/FinalAnalysis04-XX_method_summary.csv) for the exact analyzed set.
 
 The scripts perform configuration sweeps using settings defined internally. A command such as `python Method2.py asthma 0` runs the configurations implemented by Method 2; it does not select a single configuration unless the code is explicitly modified.
 
