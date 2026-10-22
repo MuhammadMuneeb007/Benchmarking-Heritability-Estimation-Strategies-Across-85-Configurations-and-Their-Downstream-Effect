@@ -1,0 +1,4 @@
+Domain,ReferenceSet,MatchedFoldRows,MaxAbsRelativeErrorDifference,MeanAbsRelativeErrorDifference,RelativeErrorSpearman,MethodRankSpearman,MaxMethodRankShift,ConfigurationRankSpearman,MaxConfigurationRankShift,AllRelativeErrorsEqualWithin1e10
+empirical,primary,3632,2.842170943040401e-14,8.460555757130037e-16,1.0,0.9999999999999999,0.0,1.0,0.0,True
+empirical,secondary,3632,2.842170943040401e-14,8.959206142775342e-16,0.9999999999373843,0.9999999999999999,0.0,1.0,0.0,True
+simulated,known_truth,38263,4.547473508864641e-13,1.880533403342063e-15,1.0,1.0,0.0,1.0,0.0,True

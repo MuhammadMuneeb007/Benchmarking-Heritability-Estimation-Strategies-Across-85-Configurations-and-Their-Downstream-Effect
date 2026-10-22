@@ -1,0 +1,11 @@
+Phenotype,K low,K primary,K high,Converted configurations,Mean h2 lowK,Mean h2 primaryK,Mean h2 highK,Mean abs delta low-primary,Mean abs delta high-primary,Median sensitivity range %,Max sensitivity range %,Spearman native vs primary,Spearman lowK vs primary,Spearman highK vs primary,Config ranks changed,Method ranks changed,Maximum method rank shift
+asthma,0.143,0.156,0.169,83,0.146502,0.150554,0.154343,0.013256,0.012392,5.208098,5.208098,0.997481,1.0,1.0,0,0,0.0
+body_mass_index_bmi,,,,0,,,,,,,,,,,0,0,
+depression,0.3527,0.3527,0.3527,84,0.377736,0.377736,0.377736,0.0,0.0,0.0,0.0,0.98793,1.0,1.0,0,0,0.0
+gastro_oesophageal_reflux_gord_gastric_reflux,0.0916,0.1453,0.2085,85,0.561054,0.649404,0.725315,0.132349,0.113715,25.294034,25.294034,0.999003,1.0,1.0,0,0,0.0
+high_cholesterol,0.135,0.135,0.235,54,0.573862,0.573862,0.67894,0.0,0.150559,18.31059,18.31059,1.0,1.0,1.0,0,0,0.0
+hypertension,0.244,0.244,0.362,85,0.310928,0.310928,0.341336,0.0,0.042975,9.779659,9.779659,0.991516,1.0,1.0,0,0,0.0
+hypothyroidism_myxoedema,0.032,0.036,0.045,85,0.652174,0.674419,0.719766,0.022696,0.046267,10.022265,10.022265,0.999003,1.0,1.0,0,0,0.0
+irritable_bowel_syndrome,0.043,0.088,0.145,84,0.105956,0.131941,0.154564,0.090571,0.078855,36.841101,36.841101,0.999858,1.0,1.0,0,0,0.0
+migraine,0.076,0.104,0.183,84,0.767559,0.847436,1.012027,0.146375,0.301613,28.848044,28.848044,0.841922,1.0,1.0,0,0,0.0
+osteoarthritis,0.107,0.107,0.108,85,0.268094,0.268094,0.268888,0.0,0.001116,0.296002,0.296002,0.99912,1.0,1.0,0,0,0.0

@@ -1,0 +1,156 @@
+FINAL ANALYSIS 04-XX — EXTERNAL-REFERENCE / KNOWN-TRUTH ACCURACY
+==============================================================================================================
+
+SIMULATED DATA: reference = known generating h2 (true ground truth).
+EMPIRICAL DATA: reference = external literature anchor; NOT ground truth.
+Empirical PRIMARY and SECONDARY literature anchors are analysed separately and never averaged.
+A publication-distinct empirical reference does not necessarily imply participant-level independence.
+Binary estimates are compared only with scale-matched references.
+
+EMPIRICAL EXTERNAL LITERATURE REFERENCES
+--------------------------------------------------------------------------------------------------------------
+Asthma | PRIMARY | h2=0.2100 (liability) | Johansson_2019 | DOI=10.1093/hmg/ddz175
+Asthma | SECONDARY | h2=0.1130 (liability) | Valette_2021 | DOI=10.1038/s42003-021-02227-6
+Body Mass Index | PRIMARY | h2=0.2240 (quantitative) | Yengo_2018 | DOI=10.1093/hmg/ddy271
+Body Mass Index | SECONDARY | h2=0.2850 (quantitative) | Hou_2019 | DOI=10.1038/s41588-019-0465-0
+Depression | PRIMARY | h2=0.1200 (liability) | Huider_2026 | DOI=10.1038/s41380-026-03666-5
+Depression | SECONDARY | h2=0.1020 (liability) | Howard_2018 | DOI=10.1038/s41467-018-03819-3
+Gastro-Oesophageal Reflux | PRIMARY | h2=0.0700 (liability) | Gharahkhani_2015 | DOI=10.1093/hmg/ddv512
+Gastro-Oesophageal Reflux | SECONDARY | h2=0.1130 (liability) | An_2019 | DOI=10.1038/s41467-019-11968-2
+High Cholesterol | PRIMARY | h2=0.1890 (liability) | Tang_2022,Ge_2017 | DOI=10.1093/bib/bbac115; 10.1371/journal.pgen.1006711
+High Cholesterol | SECONDARY | h2=0.0820 (observed) | Hou_2019 | DOI=10.1038/s41588-019-0465-0
+Hypertension | PRIMARY | h2=0.3200 (liability) | Mu_oz_2016 | DOI=10.1038/ng.3618
+Hypertension | SECONDARY | h2=0.3110 (liability) | Hujoel_2022 | DOI=10.1016/j.xgen.2022.100152
+Hypothyroidism | PRIMARY | h2=0.1450 (liability) | Rand_2025 | DOI=10.1038/s41588-025-02410-z
+Hypothyroidism | SECONDARY | h2=0.1080 (liability) | Mathieu_2022 | DOI=10.1016/j.isci.2022.104992
+Irritable Bowel Syndrome | PRIMARY | h2=0.0600 (liability) | Wu_2021 | DOI=10.1038/s41467-021-21280-7
+Irritable Bowel Syndrome | SECONDARY | h2=0.0577 (liability) | Eijsbouts_2021 | DOI=10.1038/s41588-021-00950-8
+Migraine | PRIMARY | h2=0.1120 (liability) | Hautakangas_2022 | DOI=10.1038/s41588-021-00990-0
+Migraine | SECONDARY | h2=0.1460 (liability) | Gormley_2016 | DOI=10.1038/ng.3598
+Osteoarthritis | PRIMARY | h2=0.0940 (liability) | Barowsky_2021 | DOI=10.3389/fgene.2021.687687
+Osteoarthritis | SECONDARY | h2=0.0892 (liability) | Huang_2023 | DOI=10.3389/fimmu.2023.1184958
+
+TOP METHOD AND TOP CONFIGURATION BY ANALYSIS
+--------------------------------------------------------------------------------------------------------------
+
+empirical_primary_binary_liability
+  CONFIGURATION: LDAK-Precomputed-Heritability | h2model_standardized=LDAK_bld.ldak.hapmap.gbr.tagging | h2model=LDAK_bld.ldak.hapmap.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=- | MAE=0.02879; bias=-0.001853; runner-up=LDAK-Precomputed-Heritability | h2model_standardized=LDAK_ldak.thin.genotyped.gbr.tagging | h2model=LDAK_ldak.thin.genotyped.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=-; best-vs-runner p=0.6406; q=0.765; FDR-significantly closer than 49/81 tested comparators
+  METHOD: LDAK-Precomputed-Heritability | MAE=0.08091; bias=-0.007707; runner-up=LDSC-Heritability; best-vs-runner p=0.7422; q=0.8564; FDR-significantly closer than 3/9 tested comparators
+
+empirical_primary_binary_observed
+  CONFIGURATION: LDAK-Precomputed-Heritability | h2model_standardized=LDAK_bld.ldak.hapmap.gbr.tagging | h2model=LDAK_bld.ldak.hapmap.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=- | MAE=0.01433; bias=-0.005057; runner-up=LDAK-Precomputed-Heritability | h2model_standardized=LDAK_bld.ldak.genotyped.gbr.tagging | h2model=LDAK_bld.ldak.genotyped.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=-; best-vs-runner p=0.8438; q=0.9004; FDR-significantly closer than 49/81 tested comparators
+  METHOD: LDAK-Precomputed-Heritability | MAE=0.02663; bias=-0.009645; runner-up=Gemma2-Heritability; best-vs-runner p=0.3125; q=0.4395; FDR-significantly closer than 3/9 tested comparators
+
+empirical_primary_continuous_native
+  CONFIGURATION: DPR-Gemma-Heritability | h2model_standardized=HE regression_standardized_genotype_covariate_pca | h2model=HE regression_standardized_genotype_covariate_pca | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6 | MAE=0.01459; bias=-0.01459; runner-up=Gemma1-Heritability | h2model_standardized=HE regression_standardized_genotype_covariate_pca | h2model=HE regression_standardized_genotype_covariate_pca | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6; best-vs-runner p=NA; q=NA; FDR-significantly closer than 0/0 tested comparators
+  METHOD: LDAK-Calculated-Heritability | MAE=0.06418; bias=-0.06418; runner-up=Gemma2-Heritability; best-vs-runner p=NA; q=NA; FDR-significantly closer than 0/0 tested comparators
+
+empirical_secondary_binary_liability
+  CONFIGURATION: LDAK-Precomputed-Heritability | h2model_standardized=LDAK_ldak.thin.genotyped.gbr.tagging | h2model=LDAK_ldak.thin.genotyped.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=- | MAE=0.04133; bias=0.00712; runner-up=LDAK-Precomputed-Heritability | h2model_standardized=LDAK_ldak.thin.hapmap.gbr.tagging | h2model=LDAK_ldak.thin.hapmap.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=-; best-vs-runner p=0.7422; q=0.8302; FDR-significantly closer than 0/81 tested comparators
+  METHOD: LDAK-Precomputed-Heritability | MAE=0.08899; bias=0.003681; runner-up=LDSC-Heritability; best-vs-runner p=1; q=1; FDR-significantly closer than 3/9 tested comparators
+
+empirical_secondary_binary_observed
+  CONFIGURATION: LDAK-Precomputed-Heritability | h2model_standardized=LDAK_bld.ldak.genotyped.gbr.tagging | h2model=LDAK_bld.ldak.genotyped.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=- | MAE=0.01664; bias=-0.001345; runner-up=LDAK-Precomputed-Heritability | h2model_standardized=LDAK_bld.ldak.hapmap.gbr.tagging | h2model=LDAK_bld.ldak.hapmap.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=-; best-vs-runner p=0.4258; q=0.5461; FDR-significantly closer than 54/83 tested comparators
+  METHOD: LDAK-Precomputed-Heritability | MAE=0.02776; bias=-0.004914; runner-up=Gemma2-Heritability; best-vs-runner p=0.4258; q=0.5474; FDR-significantly closer than 3/9 tested comparators
+
+empirical_secondary_continuous_native
+  CONFIGURATION: LDAK-Precomputed-Heritability | h2model_standardized=LDAK_ldak.thin.genotyped.gbr.tagging | h2model=LDAK_ldak.thin.genotyped.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=- | MAE=0.0337; bias=0.0337; runner-up=LDAK-Precomputed-Heritability | h2model_standardized=LDAK_ldak.thin.hapmap.gbr.tagging | h2model=LDAK_ldak.thin.hapmap.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=-; best-vs-runner p=NA; q=NA; FDR-significantly closer than 0/0 tested comparators
+  METHOD: LDAK-Precomputed-Heritability | MAE=0.07309; bias=0.07309; runner-up=LDAK-Calculated-Heritability; best-vs-runner p=NA; q=NA; FDR-significantly closer than 0/0 tested comparators
+
+sim_continuous_native_N750
+  CONFIGURATION: LDSC-Heritability | h2model_standardized=LDSC_SIM_REFERENCE5000 | h2model=LDSC_SIM_REFERENCE5000 | clumpprune=no | numberofpca=- | MAE=0.03783; bias=-0.031; runner-up=LDAK-Calculated-Heritability | h2model_standardized=LDAK_alpha_0.5_yes | h2model=LDAK_alpha_0.5_yes | clumpprune=yes | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6; best-vs-runner p=0.08579; q=0.1378; FDR-significantly closer than 72/77 tested comparators
+  METHOD: LDSC-Heritability | MAE=0.03783; bias=-0.031; runner-up=LDAK-Calculated-Heritability; best-vs-runner p=0.03808; q=0.04284; FDR-significantly closer than 8/8 tested comparators
+
+sim_continuous_native_N5000
+  CONFIGURATION: GCTA-Heritability | h2model_standardized=GCTA_genotype_covariate | h2model=GCTA_genotype_covariate | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6 | MAE=0.01998; bias=0.003492; runner-up=GCTA-Heritability | h2model_standardized=GCTA_genotype | h2model=GCTA_genotype | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6; best-vs-runner p=0.1476; q=0.1743; FDR-significantly closer than 71/77 tested comparators
+  METHOD: LDSC-Heritability | MAE=0.0373; bias=-0.03111; runner-up=LDAK-Calculated-Heritability; best-vs-runner p=0.008849; q=0.009955; FDR-significantly closer than 8/8 tested comparators
+
+sim_continuous_native_overall_equalN
+  CONFIGURATION: GCTA-Heritability | h2model_standardized=GCTA_genotype_covariate | h2model=GCTA_genotype_covariate | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6 | MAE=0.03323; bias=0.00465; runner-up=GCTA-Heritability | h2model_standardized=GCTA_genotype | h2model=GCTA_genotype | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6; best-vs-runner p=0.009117; q=0.01474; FDR-significantly closer than 75/77 tested comparators
+  METHOD: LDSC-Heritability | MAE=0.03756; bias=-0.03105; runner-up=LDAK-Calculated-Heritability; best-vs-runner p=0.01856; q=0.02088; FDR-significantly closer than 8/8 tested comparators
+
+sim_binary_liability_N750
+  CONFIGURATION: LDSC-Heritability | h2model_standardized=LDSC_SIM_REFERENCE5000 | h2model=LDSC_SIM_REFERENCE5000 | clumpprune=no | numberofpca=- | MAE=0.04408; bias=-0.02985; runner-up=Gemma-LDSC-Heritability | h2model_standardized=REML AI algorithm_genotype_covariate | h2model=REML AI algorithm_genotype_covariate | clumpprune=yes | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6; best-vs-runner p=6.725e-06; q=3.126e-05; FDR-significantly closer than 77/77 tested comparators
+  METHOD: LDSC-Heritability | MAE=0.04408; bias=-0.02985; runner-up=Gemma-LDSC-Heritability; best-vs-runner p=3.382e-06; q=5.535e-06; FDR-significantly closer than 8/8 tested comparators
+
+sim_binary_liability_N5000
+  CONFIGURATION: LDSC-Heritability | h2model_standardized=LDSC_SIM_REFERENCE5000 | h2model=LDSC_SIM_REFERENCE5000 | clumpprune=no | numberofpca=- | MAE=0.04377; bias=-0.02955; runner-up=GCTA-Heritability | h2model_standardized=GCTA_genotype | h2model=GCTA_genotype | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6; best-vs-runner p=0.02826; q=0.04775; FDR-significantly closer than 77/77 tested comparators
+  METHOD: LDSC-Heritability | MAE=0.04377; bias=-0.02955; runner-up=GCTA-Heritability; best-vs-runner p=3.706e-09; q=6.352e-09; FDR-significantly closer than 8/8 tested comparators
+
+sim_binary_liability_overall_equalN
+  CONFIGURATION: LDSC-Heritability | h2model_standardized=LDSC_SIM_REFERENCE5000 | h2model=LDSC_SIM_REFERENCE5000 | clumpprune=no | numberofpca=- | MAE=0.04392; bias=-0.0297; runner-up=Gemma-LDSC-Heritability | h2model_standardized=REML AI algorithm_genotype_covariate | h2model=REML AI algorithm_genotype_covariate | clumpprune=yes | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6; best-vs-runner p=2.081e-05; q=7.941e-05; FDR-significantly closer than 77/77 tested comparators
+  METHOD: LDSC-Heritability | MAE=0.04392; bias=-0.0297; runner-up=Gemma-LDSC-Heritability; best-vs-runner p=1.781e-05; q=2.914e-05; FDR-significantly closer than 8/8 tested comparators
+
+sim_binary_observed_N750
+  CONFIGURATION: LDSC-Heritability | h2model_standardized=LDSC_SIM_REFERENCE5000 | h2model=LDSC_SIM_REFERENCE5000 | clumpprune=no | numberofpca=- | MAE=0.01512; bias=-0.01026; runner-up=Gemma-LDSC-Heritability | h2model_standardized=REML AI algorithm_genotype_covariate | h2model=REML AI algorithm_genotype_covariate | clumpprune=yes | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6; best-vs-runner p=6.011e-06; q=2.785e-05; FDR-significantly closer than 77/77 tested comparators
+  METHOD: LDSC-Heritability | MAE=0.01512; bias=-0.01026; runner-up=Gemma-LDSC-Heritability; best-vs-runner p=3.007e-06; q=4.92e-06; FDR-significantly closer than 8/8 tested comparators
+
+sim_binary_observed_N5000
+  CONFIGURATION: LDSC-Heritability | h2model_standardized=LDSC_SIM_REFERENCE5000 | h2model=LDSC_SIM_REFERENCE5000 | clumpprune=no | numberofpca=- | MAE=0.01501; bias=-0.01016; runner-up=GCTA-Heritability | h2model_standardized=GCTA_genotype | h2model=GCTA_genotype | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6; best-vs-runner p=0.02238; q=0.03912; FDR-significantly closer than 77/77 tested comparators
+  METHOD: LDSC-Heritability | MAE=0.01501; bias=-0.01016; runner-up=GCTA-Heritability; best-vs-runner p=5.31e-09; q=9.103e-09; FDR-significantly closer than 8/8 tested comparators
+
+sim_binary_observed_overall_equalN
+  CONFIGURATION: LDSC-Heritability | h2model_standardized=LDSC_SIM_REFERENCE5000 | h2model=LDSC_SIM_REFERENCE5000 | clumpprune=no | numberofpca=- | MAE=0.01506; bias=-0.01021; runner-up=Gemma-LDSC-Heritability | h2model_standardized=REML AI algorithm_genotype_covariate | h2model=REML AI algorithm_genotype_covariate | clumpprune=yes | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6; best-vs-runner p=1.876e-05; q=7.259e-05; FDR-significantly closer than 77/77 tested comparators
+  METHOD: LDSC-Heritability | MAE=0.01506; bias=-0.01021; runner-up=Gemma-LDSC-Heritability; best-vs-runner p=1.781e-05; q=2.914e-05; FDR-significantly closer than 8/8 tested comparators
+
+GLOBAL FRIEDMAN TESTS
+--------------------------------------------------------------------------------------------------------------
+empirical_primary_binary_liability | configuration | paired units=8; groups=82; chi2=315.4; p=2.162e-29; q(global family)=2.676e-29
+empirical_primary_binary_observed | configuration | paired units=8; groups=82; chi2=369.7; p=1.765e-38; q(global family)=2.416e-38
+empirical_primary_continuous_native | configuration | paired units=1; groups=85; chi2=NA; p=NA; q(global family)=NA
+empirical_secondary_binary_liability | configuration | paired units=8; groups=82; chi2=310.7; p=1.289e-28; q(global family)=1.523e-28
+empirical_secondary_binary_observed | configuration | paired units=8; groups=84; chi2=360.6; p=2.911e-36; q(global family)=3.785e-36
+empirical_secondary_continuous_native | configuration | paired units=1; groups=85; chi2=NA; p=NA; q(global family)=NA
+sim_continuous_native_N750 | configuration | paired units=50; groups=78; chi2=1191; p=3.875e-199; q(global family)=1.439e-198
+sim_continuous_native_N5000 | configuration | paired units=50; groups=78; chi2=1547; p=3.24e-272; q(global family)=8.425e-271
+sim_continuous_native_overall_equalN | configuration | paired units=50; groups=78; chi2=1418; p=1.314e-245; q(global family)=1.709e-244
+sim_binary_liability_N750 | configuration | paired units=50; groups=78; chi2=1029; p=2.019e-166; q(global family)=6.562e-166
+sim_binary_liability_N5000 | configuration | paired units=50; groups=78; chi2=1341; p=6.579e-230; q(global family)=4.276e-229
+sim_binary_liability_overall_equalN | configuration | paired units=50; groups=78; chi2=1222; p=1.56e-205; q(global family)=8.111e-205
+sim_binary_observed_N750 | configuration | paired units=50; groups=78; chi2=1027; p=6.293e-166; q(global family)=1.818e-165
+sim_binary_observed_N5000 | configuration | paired units=50; groups=78; chi2=1342; p=4.046e-230; q(global family)=3.507e-229
+sim_binary_observed_overall_equalN | configuration | paired units=50; groups=78; chi2=1217; p=2.198e-204; q(global family)=9.526e-204
+empirical_primary_binary_liability | method | paired units=8; groups=10; chi2=34.96; p=6.051e-05; q(global family)=6.187e-05
+empirical_primary_binary_observed | method | paired units=8; groups=10; chi2=46.43; p=5.002e-07; q(global family)=5.419e-07
+empirical_primary_continuous_native | method | paired units=1; groups=10; chi2=NA; p=NA; q(global family)=NA
+empirical_secondary_binary_liability | method | paired units=8; groups=10; chi2=34.91; p=6.187e-05; q(global family)=6.187e-05
+empirical_secondary_binary_observed | method | paired units=9; groups=10; chi2=53.56; p=2.292e-08; q(global family)=2.59e-08
+empirical_secondary_continuous_native | method | paired units=1; groups=10; chi2=NA; p=NA; q(global family)=NA
+sim_binary_liability_N5000 | method | paired units=50; groups=9; chi2=252.3; p=5.502e-50; q(global family)=1.1e-49
+sim_binary_liability_N750 | method | paired units=50; groups=9; chi2=247.7; p=5.227e-49; q(global family)=7.55e-49
+sim_binary_liability_overall_equalN | method | paired units=50; groups=9; chi2=250.8; p=1.155e-49; q(global family)=2.002e-49
+sim_binary_observed_N5000 | method | paired units=50; groups=9; chi2=252.1; p=6.094e-50; q(global family)=1.132e-49
+sim_binary_observed_N750 | method | paired units=50; groups=9; chi2=252.6; p=4.794e-50; q(global family)=1.039e-49
+sim_binary_observed_overall_equalN | method | paired units=50; groups=9; chi2=250.7; p=1.254e-49; q(global family)=2.038e-49
+sim_continuous_native_N5000 | method | paired units=50; groups=9; chi2=267.9; p=2.806e-53; q(global family)=7.296e-53
+sim_continuous_native_N750 | method | paired units=50; groups=9; chi2=248; p=4.513e-49; q(global family)=6.902e-49
+sim_continuous_native_overall_equalN | method | paired units=50; groups=9; chi2=260; p=1.307e-51; q(global family)=3.089e-51
+
+BINARY OBSERVED-vs-LIABILITY SCALE-INVARIANCE AUDIT
+--------------------------------------------------------------------------------------------------------------
+No Wilcoxon/FDR comparison between scales is performed because a consistent positive scale transformation preserves relative error algebraically.
+empirical | reference=primary | matched fold rows=3632; max relative-error difference=2.842e-14; relative-error rho=1; method-rank rho=1; max method-rank shift=0; config-rank rho=1; max config-rank shift=0
+empirical | reference=secondary | matched fold rows=3632; max relative-error difference=2.842e-14; relative-error rho=1; method-rank rho=1; max method-rank shift=0; config-rank rho=1; max config-rank shift=0
+simulated | reference=known_truth | matched fold rows=38263; max relative-error difference=4.547e-13; relative-error rho=1; method-rank rho=1; max method-rank shift=0; config-rank rho=1; max config-rank shift=0
+
+PRIMARY-vs-SECONDARY EMPIRICAL REFERENCE SENSITIVITY
+--------------------------------------------------------------------------------------------------------------
+This is descriptive sensitivity analysis; no formal test treats the two literature anchors as independent data.
+binary_liability | configuration | common groups=82; rank rho=0.9982; max rank shift=4; top primary=LDAK-Precomputed-Heritability | h2model_standardized=LDAK_bld.ldak.hapmap.gbr.tagging | h2model=LDAK_bld.ldak.hapmap.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=-; top secondary=LDAK-Precomputed-Heritability | h2model_standardized=LDAK_ldak.thin.genotyped.gbr.tagging | h2model=LDAK_ldak.thin.genotyped.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=-; top preserved=False
+binary_observed | configuration | common groups=82; rank rho=0.9957; max rank shift=9; top primary=LDAK-Precomputed-Heritability | h2model_standardized=LDAK_bld.ldak.hapmap.gbr.tagging | h2model=LDAK_bld.ldak.hapmap.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=-; top secondary=LDAK-Precomputed-Heritability | h2model_standardized=LDAK_bld.ldak.genotyped.gbr.tagging | h2model=LDAK_bld.ldak.genotyped.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=-; top preserved=False
+continuous_native | configuration | common groups=85; rank rho=0.7404; max rank shift=34; top primary=DPR-Gemma-Heritability | h2model_standardized=HE regression_standardized_genotype_covariate_pca | h2model=HE regression_standardized_genotype_covariate_pca | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=6; top secondary=LDAK-Precomputed-Heritability | h2model_standardized=LDAK_ldak.thin.genotyped.gbr.tagging | h2model=LDAK_ldak.thin.genotyped.gbr.tagging | clumpprune=no | clump_p1=1 | clump_r2=0.1 | clump_kb=200 | p_window_size=200 | p_slide_size=50 | p_LD_threshold=0.25 | numberofpca=-; top preserved=False
+binary_liability | method | common groups=10; rank rho=1; max rank shift=0; top primary=LDAK-Precomputed-Heritability; top secondary=LDAK-Precomputed-Heritability; top preserved=True
+binary_observed | method | common groups=10; rank rho=1; max rank shift=0; top primary=LDAK-Precomputed-Heritability; top secondary=LDAK-Precomputed-Heritability; top preserved=True
+continuous_native | method | common groups=10; rank rho=0.7576; max rank shift=4; top primary=LDAK-Calculated-Heritability; top secondary=LDAK-Precomputed-Heritability; top preserved=False
+
+INTERPRETATION RULES
+--------------------------------------------------------------------------------------------------------------
+1. Simulated analyses measure accuracy against genuine generating truth.
+2. Empirical analyses measure concordance with external literature anchors, not empirical accuracy against truth.
+3. Primary and secondary empirical anchors are analysed separately; they are never averaged.
+4. Lower MAE means closer to the selected scale-matched reference.
+5. Pairwise Wilcoxon + BH-FDR evaluates whether methods/configurations differ in paired reference error within one analysis family.
+6. Failure to reject zero bias does not prove equivalence.
+7. Empirical BMI contains one phenotype and therefore supports descriptive ranking only.
+8. Observed-vs-liability is a representation audit, not an accuracy contest: consistent transformation preserves relative error.
+9. A different publication may still share UK Biobank or other participants; publication independence is not cohort independence.

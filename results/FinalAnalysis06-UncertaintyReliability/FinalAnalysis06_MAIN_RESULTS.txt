@@ -1,0 +1,220 @@
+FINAL ANALYSIS 06 — UNCERTAINTY / STABILITY / RELIABILITY
+===================================================================================================================
+
+ROOT: /data/ascher01/uqmmune1/finalheritability
+
+CRITICAL INTERPRETATION
+-------------------------------------------------------------------------------------------------------------------
+Cross-fold SD/MAD/IQR/range are DESCRIPTIVE stability metrics because the five CV training folds overlap.
+Fold SEM and fold-stability intervals are descriptive only; they are NOT estimator-specific inferential SE/CI.
+Software-native/tool-native SE and CI are retained separately where available.
+Negative and >1 estimates are retained without clipping.
+Missing files are reported separately and are NOT automatically classified as convergence failures.
+
+FILE-LEVEL COMPLETENESS
+-------------------------------------------------------------------------------------------------------------------
+empirical: Results_Liability.csv present 499/500 (99.80%); original Results.csv present but liability file missing=0; both missing=1.
+simulated: Results_Liability.csv present 9836/10000 (98.36%); original Results.csv present but liability file missing=0; both missing=164.
+
+EMPIRICAL CONFIGURATION-LEVEL MEAN h2: CONVENTIONAL-RANGE AUDIT
+-------------------------------------------------------------------------------------------------------------------
+Binary observed/native: N=759; h2<0: 121 (15.9%); 0<=h2<=1: 638 (84.1%); h2>1: 0 (0.0%); range=-0.8623 to 0.9265.
+Binary liability: N=729; h2<0: 118 (16.2%); 0<=h2<=1: 467 (64.1%); h2>1: 144 (19.8%); range=-3.2676 to 8.2293.
+BMI native quantitative: N=85; h2<0: 11 (12.9%); 0<=h2<=1: 73 (85.9%); h2>1: 1 (1.2%); range=-0.1909 to 2.7353.
+
+SIMULATED CONFIGURATION-LEVEL MEAN h2: CONVENTIONAL-RANGE AUDIT
+-------------------------------------------------------------------------------------------------------------------
+Continuous native, N=750: units=3900; h2<0=227 (5.8%); 0<=h2<=1=3465 (88.8%); h2>1=208 (5.3%).
+Continuous native, N=5000: units=3900; h2<0=108 (2.8%); 0<=h2<=1=3590 (92.1%); h2>1=202 (5.2%).
+Binary observed, N=750: units=3900; h2<0=384 (9.8%); 0<=h2<=1=3391 (86.9%); h2>1=125 (3.2%).
+Binary observed, N=5000: units=3900; h2<0=256 (6.6%); 0<=h2<=1=3519 (90.2%); h2>1=125 (3.2%).
+Binary liability, N=750: units=3900; h2<0=384 (9.8%); 0<=h2<=1=3231 (82.8%); h2>1=285 (7.3%).
+Binary liability, N=5000: units=3900; h2<0=256 (6.6%); 0<=h2<=1=3459 (88.7%); h2>1=185 (4.7%).
+
+EMPIRICAL CROSS-FOLD STABILITY BY METHOD
+-------------------------------------------------------------------------------------------------------------------
+observed_binary
+  LDAK-Precomputed-Heritability: evaluable=54/54; median cross-fold SD=0.0000; median range=0.0000; sign-flip units=0.0%.
+  LDSC-Heritability: evaluable=36/36; median cross-fold SD=0.0000; median range=0.0000; sign-flip units=0.0%.
+  LDAK-Calculated-Heritability: evaluable=63/63; median cross-fold SD=4.387e-04; median range=0.0012; sign-flip units=0.0%.
+  Gemma2-Heritability: evaluable=54/54; median cross-fold SD=4.672e-04; median range=0.0012; sign-flip units=0.0%.
+  LDpred-2-Heritability: evaluable=29/36; median cross-fold SD=7.385e-04; median range=0.0018; sign-flip units=3.4%.
+  Gemma-LDSC-Heritability: evaluable=27/27; median cross-fold SD=0.0017; median range=0.0038; sign-flip units=29.6%.
+  LDSC-Genotype-Heritability: evaluable=9/9; median cross-fold SD=0.0023; median range=0.0049; sign-flip units=22.2%.
+  GCTA-Heritability: evaluable=54/54; median cross-fold SD=0.2436; median range=0.5361; sign-flip units=0.0%.
+  DPR-Gemma-Heritability: evaluable=216/216; median cross-fold SD=0.2777; median range=0.6708; sign-flip units=32.9%.
+  Gemma1-Heritability: evaluable=216/216; median cross-fold SD=0.2900; median range=0.6870; sign-flip units=32.9%.
+liability_binary
+  LDAK-Precomputed-Heritability: evaluable=48/54; median cross-fold SD=0.0000; median range=0.0000; sign-flip units=0.0%.
+  LDSC-Heritability: evaluable=32/36; median cross-fold SD=0.0000; median range=0.0000; sign-flip units=0.0%.
+  Gemma2-Heritability: evaluable=48/54; median cross-fold SD=0.0016; median range=0.0039; sign-flip units=0.0%.
+  LDAK-Calculated-Heritability: evaluable=56/63; median cross-fold SD=0.0021; median range=0.0053; sign-flip units=0.0%.
+  Gemma-LDSC-Heritability: evaluable=24/27; median cross-fold SD=0.0035; median range=0.0091; sign-flip units=20.8%.
+  LDpred-2-Heritability: evaluable=26/36; median cross-fold SD=0.0042; median range=0.0101; sign-flip units=3.8%.
+  LDSC-Genotype-Heritability: evaluable=8/9; median cross-fold SD=0.0112; median range=0.0272; sign-flip units=25.0%.
+  GCTA-Heritability: evaluable=54/54; median cross-fold SD=0.6941; median range=1.5755; sign-flip units=0.0%.
+  DPR-Gemma-Heritability: evaluable=216/216; median cross-fold SD=0.7332; median range=1.7476; sign-flip units=32.9%.
+  Gemma1-Heritability: evaluable=216/216; median cross-fold SD=0.7578; median range=1.8455; sign-flip units=32.9%.
+native_quantitative
+  LDAK-Precomputed-Heritability: evaluable=6/6; median cross-fold SD=0.0000; median range=0.0000; sign-flip units=0.0%.
+  LDSC-Heritability: evaluable=4/4; median cross-fold SD=7.758e-18; median range=0.0000; sign-flip units=0.0%.
+  Gemma2-Heritability: evaluable=6/6; median cross-fold SD=0.0012; median range=0.0026; sign-flip units=0.0%.
+  LDAK-Calculated-Heritability: evaluable=7/7; median cross-fold SD=0.0030; median range=0.0074; sign-flip units=0.0%.
+  LDSC-Genotype-Heritability: evaluable=1/1; median cross-fold SD=0.0127; median range=0.0265; sign-flip units=0.0%.
+  LDpred-2-Heritability: evaluable=4/4; median cross-fold SD=0.0197; median range=0.0390; sign-flip units=0.0%.
+  Gemma1-Heritability: evaluable=24/24; median cross-fold SD=0.2076; median range=0.5001; sign-flip units=29.2%.
+  DPR-Gemma-Heritability: evaluable=24/24; median cross-fold SD=0.2076; median range=0.5001; sign-flip units=29.2%.
+  GCTA-Heritability: evaluable=6/6; median cross-fold SD=0.2497; median range=0.5584; sign-flip units=0.0%.
+  Gemma-LDSC-Heritability: evaluable=3/3; median cross-fold SD=1.1104; median range=2.7265; sign-flip units=100.0%.
+
+SOFTWARE-NATIVE / ESTIMATOR-NATIVE UNCERTAINTY AVAILABILITY
+-------------------------------------------------------------------------------------------------------------------
+empirical
+  liability_binary | DPR-Gemma-Heritability: tool-SE available for 216/216 units (100.0%); tool-CI available for 216/216 (100.0%).
+  liability_binary | GCTA-Heritability: tool-SE available for 54/54 units (100.0%); tool-CI available for 54/54 (100.0%).
+  liability_binary | Gemma-LDSC-Heritability: tool-SE available for 24/24 units (100.0%); tool-CI available for 24/24 (100.0%).
+  liability_binary | Gemma1-Heritability: tool-SE available for 216/216 units (100.0%); tool-CI available for 216/216 (100.0%).
+  liability_binary | Gemma2-Heritability: tool-SE available for 48/48 units (100.0%); tool-CI available for 48/48 (100.0%).
+  liability_binary | LDAK-Calculated-Heritability: tool-SE available for 56/56 units (100.0%); tool-CI available for 56/56 (100.0%).
+  liability_binary | LDAK-Precomputed-Heritability: tool-SE available for 48/48 units (100.0%); tool-CI available for 48/48 (100.0%).
+  liability_binary | LDSC-Genotype-Heritability: tool-SE available for 8/8 units (100.0%); tool-CI available for 8/8 (100.0%).
+  liability_binary | LDSC-Heritability: tool-SE available for 32/32 units (100.0%); tool-CI available for 32/32 (100.0%).
+  liability_binary | LDpred-2-Heritability: tool-SE available for 0/27 units (0.0%); tool-CI available for 0/27 (0.0%).
+  observed_binary | DPR-Gemma-Heritability: tool-SE available for 216/216 units (100.0%); tool-CI available for 216/216 (100.0%).
+  observed_binary | GCTA-Heritability: tool-SE available for 54/54 units (100.0%); tool-CI available for 54/54 (100.0%).
+  observed_binary | Gemma-LDSC-Heritability: tool-SE available for 27/27 units (100.0%); tool-CI available for 27/27 (100.0%).
+  observed_binary | Gemma1-Heritability: tool-SE available for 216/216 units (100.0%); tool-CI available for 216/216 (100.0%).
+  observed_binary | Gemma2-Heritability: tool-SE available for 54/54 units (100.0%); tool-CI available for 54/54 (100.0%).
+  observed_binary | LDAK-Calculated-Heritability: tool-SE available for 63/63 units (100.0%); tool-CI available for 63/63 (100.0%).
+  observed_binary | LDAK-Precomputed-Heritability: tool-SE available for 54/54 units (100.0%); tool-CI available for 54/54 (100.0%).
+  observed_binary | LDSC-Genotype-Heritability: tool-SE available for 9/9 units (100.0%); tool-CI available for 9/9 (100.0%).
+  observed_binary | LDSC-Heritability: tool-SE available for 36/36 units (100.0%); tool-CI available for 36/36 (100.0%).
+  observed_binary | LDpred-2-Heritability: tool-SE available for 0/30 units (0.0%); tool-CI available for 0/30 (0.0%).
+  native_quantitative | DPR-Gemma-Heritability: tool-SE available for 24/24 units (100.0%); tool-CI available for 24/24 (100.0%).
+  native_quantitative | GCTA-Heritability: tool-SE available for 6/6 units (100.0%); tool-CI available for 6/6 (100.0%).
+  native_quantitative | Gemma-LDSC-Heritability: tool-SE available for 3/3 units (100.0%); tool-CI available for 3/3 (100.0%).
+  native_quantitative | Gemma1-Heritability: tool-SE available for 24/24 units (100.0%); tool-CI available for 24/24 (100.0%).
+  native_quantitative | Gemma2-Heritability: tool-SE available for 6/6 units (100.0%); tool-CI available for 6/6 (100.0%).
+  native_quantitative | LDAK-Calculated-Heritability: tool-SE available for 7/7 units (100.0%); tool-CI available for 7/7 (100.0%).
+  native_quantitative | LDAK-Precomputed-Heritability: tool-SE available for 6/6 units (100.0%); tool-CI available for 6/6 (100.0%).
+  native_quantitative | LDSC-Genotype-Heritability: tool-SE available for 1/1 units (100.0%); tool-CI available for 1/1 (100.0%).
+  native_quantitative | LDSC-Heritability: tool-SE available for 4/4 units (100.0%); tool-CI available for 4/4 (100.0%).
+  native_quantitative | LDpred-2-Heritability: tool-SE available for 0/4 units (0.0%); tool-CI available for 0/4 (0.0%).
+simulated
+  liability_binary | DPR-Gemma-Heritability: tool-SE available for 1200/1200 units (100.0%); tool-CI available for 1200/1200 (100.0%).
+  liability_binary | GCTA-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  liability_binary | Gemma-LDSC-Heritability: tool-SE available for 150/150 units (100.0%); tool-CI available for 150/150 (100.0%).
+  liability_binary | Gemma1-Heritability: tool-SE available for 1200/1200 units (100.0%); tool-CI available for 1200/1200 (100.0%).
+  liability_binary | Gemma2-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  liability_binary | LDAK-Calculated-Heritability: tool-SE available for 350/350 units (100.0%); tool-CI available for 350/350 (100.0%).
+  liability_binary | LDAK-Precomputed-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  liability_binary | LDSC-Genotype-Heritability: tool-SE available for 50/50 units (100.0%); tool-CI available for 50/50 (100.0%).
+  liability_binary | LDSC-Heritability: tool-SE available for 50/50 units (100.0%); tool-CI available for 50/50 (100.0%).
+  liability_binary | DPR-Gemma-Heritability: tool-SE available for 1200/1200 units (100.0%); tool-CI available for 1200/1200 (100.0%).
+  liability_binary | GCTA-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  liability_binary | Gemma-LDSC-Heritability: tool-SE available for 150/150 units (100.0%); tool-CI available for 150/150 (100.0%).
+  liability_binary | Gemma1-Heritability: tool-SE available for 1200/1200 units (100.0%); tool-CI available for 1200/1200 (100.0%).
+  liability_binary | Gemma2-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  liability_binary | LDAK-Calculated-Heritability: tool-SE available for 350/350 units (100.0%); tool-CI available for 350/350 (100.0%).
+  liability_binary | LDAK-Precomputed-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  liability_binary | LDSC-Genotype-Heritability: tool-SE available for 50/50 units (100.0%); tool-CI available for 50/50 (100.0%).
+  liability_binary | LDSC-Heritability: tool-SE available for 50/50 units (100.0%); tool-CI available for 50/50 (100.0%).
+  observed_binary | DPR-Gemma-Heritability: tool-SE available for 1200/1200 units (100.0%); tool-CI available for 1200/1200 (100.0%).
+  observed_binary | GCTA-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  observed_binary | Gemma-LDSC-Heritability: tool-SE available for 150/150 units (100.0%); tool-CI available for 150/150 (100.0%).
+  observed_binary | Gemma1-Heritability: tool-SE available for 1200/1200 units (100.0%); tool-CI available for 1200/1200 (100.0%).
+  observed_binary | Gemma2-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  observed_binary | LDAK-Calculated-Heritability: tool-SE available for 350/350 units (100.0%); tool-CI available for 350/350 (100.0%).
+  observed_binary | LDAK-Precomputed-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  observed_binary | LDSC-Genotype-Heritability: tool-SE available for 50/50 units (100.0%); tool-CI available for 50/50 (100.0%).
+  observed_binary | LDSC-Heritability: tool-SE available for 50/50 units (100.0%); tool-CI available for 50/50 (100.0%).
+  observed_binary | DPR-Gemma-Heritability: tool-SE available for 1200/1200 units (100.0%); tool-CI available for 1200/1200 (100.0%).
+  observed_binary | GCTA-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  observed_binary | Gemma-LDSC-Heritability: tool-SE available for 150/150 units (100.0%); tool-CI available for 150/150 (100.0%).
+  observed_binary | Gemma1-Heritability: tool-SE available for 1200/1200 units (100.0%); tool-CI available for 1200/1200 (100.0%).
+  observed_binary | Gemma2-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  observed_binary | LDAK-Calculated-Heritability: tool-SE available for 350/350 units (100.0%); tool-CI available for 350/350 (100.0%).
+  observed_binary | LDAK-Precomputed-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  observed_binary | LDSC-Genotype-Heritability: tool-SE available for 50/50 units (100.0%); tool-CI available for 50/50 (100.0%).
+  observed_binary | LDSC-Heritability: tool-SE available for 50/50 units (100.0%); tool-CI available for 50/50 (100.0%).
+  native_quantitative | DPR-Gemma-Heritability: tool-SE available for 1200/1200 units (100.0%); tool-CI available for 1200/1200 (100.0%).
+  native_quantitative | GCTA-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  native_quantitative | Gemma-LDSC-Heritability: tool-SE available for 150/150 units (100.0%); tool-CI available for 150/150 (100.0%).
+  native_quantitative | Gemma1-Heritability: tool-SE available for 1200/1200 units (100.0%); tool-CI available for 1200/1200 (100.0%).
+  native_quantitative | Gemma2-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  native_quantitative | LDAK-Calculated-Heritability: tool-SE available for 350/350 units (100.0%); tool-CI available for 350/350 (100.0%).
+  native_quantitative | LDAK-Precomputed-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  native_quantitative | LDSC-Genotype-Heritability: tool-SE available for 50/50 units (100.0%); tool-CI available for 50/50 (100.0%).
+  native_quantitative | LDSC-Heritability: tool-SE available for 50/50 units (100.0%); tool-CI available for 50/50 (100.0%).
+  native_quantitative | DPR-Gemma-Heritability: tool-SE available for 1200/1200 units (100.0%); tool-CI available for 1200/1200 (100.0%).
+  native_quantitative | GCTA-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  native_quantitative | Gemma-LDSC-Heritability: tool-SE available for 150/150 units (100.0%); tool-CI available for 150/150 (100.0%).
+  native_quantitative | Gemma1-Heritability: tool-SE available for 1200/1200 units (100.0%); tool-CI available for 1200/1200 (100.0%).
+  native_quantitative | Gemma2-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  native_quantitative | LDAK-Calculated-Heritability: tool-SE available for 350/350 units (100.0%); tool-CI available for 350/350 (100.0%).
+  native_quantitative | LDAK-Precomputed-Heritability: tool-SE available for 300/300 units (100.0%); tool-CI available for 300/300 (100.0%).
+  native_quantitative | LDSC-Genotype-Heritability: tool-SE available for 50/50 units (100.0%); tool-CI available for 50/50 (100.0%).
+  native_quantitative | LDSC-Heritability: tool-SE available for 50/50 units (100.0%); tool-CI available for 50/50 (100.0%).
+
+EXPLICIT CONVERGENCE / WARNING INFORMATION
+-------------------------------------------------------------------------------------------------------------------
+empirical: explicit convergence/warning/error information available for 0/4241 source rows (0.0%); explicit non-converged=0; explicit failure/error=0; explicit warnings=0.
+simulated: explicit convergence/warning/error information available for 0/80817 source rows (0.0%); explicit non-converged=0; explicit failure/error=0; explicit warnings=0.
+NOTE: not-reported convergence is NOT interpreted as successful convergence or failure.
+
+SIMULATED PAIRED SAMPLE-SIZE EFFECT ON CROSS-FOLD STABILITY
+-------------------------------------------------------------------------------------------------------------------
+Delta SD = cross-fold SD at N=5000 minus cross-fold SD at N=750; negative = greater stability at N=5000.
+binary | liability_binary | Gemma1-Heritability: paired units=1200; median SD N750=0.2476; N5000=0.0627; median delta=-0.1766; 92.2% more stable at N5000; p=8.814e-182; q=7.932e-181.
+binary | liability_binary | DPR-Gemma-Heritability: paired units=1176; median SD N750=0.2450; N5000=0.0625; median delta=-0.1754; 91.8% more stable at N5000; p=1.660e-177; q=7.470e-177.
+binary | liability_binary | GCTA-Heritability: paired units=300; median SD N750=0.2247; N5000=0.0547; median delta=-0.1658; 92.7% more stable at N5000; p=6.409e-48; q=1.923e-47.
+binary | liability_binary | Gemma2-Heritability: paired units=300; median SD N750=0.0061; N5000=0.0039; median delta=-0.0012; 83.3% more stable at N5000; p=1.270e-28; q=2.857e-28.
+binary | liability_binary | Gemma-LDSC-Heritability: paired units=150; median SD N750=0.0105; N5000=0.0073; median delta=-0.0046; 77.3% more stable at N5000; p=6.097e-17; q=1.097e-16.
+binary | liability_binary | LDAK-Calculated-Heritability: paired units=210; median SD N750=0.0100; N5000=0.0080; median delta=-0.0028; 67.6% more stable at N5000; p=8.359e-12; q=1.254e-11.
+binary | liability_binary | LDSC-Genotype-Heritability: paired units=50; median SD N750=0.0963; N5000=0.0885; median delta=-0.0164; 64.0% more stable at N5000; p=0.0268; q=0.0345.
+binary | liability_binary | LDSC-Heritability: paired units=47; median SD N750=0.0000; N5000=0.0000; median delta=0.0000; 4.3% more stable at N5000; p=0.1797; q=0.2022.
+binary | liability_binary | LDAK-Precomputed-Heritability: paired units=272; median SD N750=0.0000; N5000=0.0000; median delta=0.0000; 1.1% more stable at N5000; p=1.0000; q=1.0000.
+binary | observed_binary | Gemma1-Heritability: paired units=1200; median SD N750=0.0856; N5000=0.0217; median delta=-0.0624; 92.3% more stable at N5000; p=1.185e-182; q=1.067e-181.
+binary | observed_binary | DPR-Gemma-Heritability: paired units=1176; median SD N750=0.0850; N5000=0.0217; median delta=-0.0619; 92.2% more stable at N5000; p=1.751e-178; q=7.878e-178.
+binary | observed_binary | GCTA-Heritability: paired units=300; median SD N750=0.0789; N5000=0.0192; median delta=-0.0591; 93.3% more stable at N5000; p=5.328e-48; q=1.598e-47.
+binary | observed_binary | Gemma2-Heritability: paired units=300; median SD N750=0.0021; N5000=0.0013; median delta=-3.929e-04; 83.3% more stable at N5000; p=1.289e-28; q=2.900e-28.
+binary | observed_binary | Gemma-LDSC-Heritability: paired units=150; median SD N750=0.0036; N5000=0.0025; median delta=-0.0016; 77.3% more stable at N5000; p=6.001e-17; q=1.080e-16.
+binary | observed_binary | LDAK-Calculated-Heritability: paired units=210; median SD N750=0.0034; N5000=0.0027; median delta=-9.717e-04; 67.6% more stable at N5000; p=9.411e-12; q=1.412e-11.
+binary | observed_binary | LDSC-Genotype-Heritability: paired units=50; median SD N750=0.0336; N5000=0.0300; median delta=-0.0056; 64.0% more stable at N5000; p=0.0268; q=0.0345.
+binary | observed_binary | LDSC-Heritability: paired units=47; median SD N750=0.0000; N5000=0.0000; median delta=0.0000; 2.1% more stable at N5000; p=0.3173; q=0.3570.
+binary | observed_binary | LDAK-Precomputed-Heritability: paired units=272; median SD N750=0.0000; N5000=0.0000; median delta=0.0000; 0.7% more stable at N5000; p=1.0000; q=1.0000.
+continuous | native_quantitative | Gemma1-Heritability: paired units=1200; median SD N750=0.0974; N5000=0.0239; median delta=-0.0667; 97.2% more stable at N5000; p=1.070e-188; q=9.629e-188.
+continuous | native_quantitative | DPR-Gemma-Heritability: paired units=1176; median SD N750=0.0980; N5000=0.0239; median delta=-0.0679; 97.1% more stable at N5000; p=6.928e-185; q=3.117e-184.
+continuous | native_quantitative | GCTA-Heritability: paired units=300; median SD N750=0.0850; N5000=0.0212; median delta=-0.0636; 98.7% more stable at N5000; p=7.584e-51; q=2.275e-50.
+continuous | native_quantitative | LDAK-Calculated-Heritability: paired units=189; median SD N750=0.0069; N5000=0.0043; median delta=-0.0010; 66.7% more stable at N5000; p=9.354e-11; q=2.105e-10.
+continuous | native_quantitative | Gemma2-Heritability: paired units=300; median SD N750=0.0026; N5000=0.0029; median delta=-1.614e-04; 73.3% more stable at N5000; p=1.201e-10; q=2.161e-10.
+continuous | native_quantitative | Gemma-LDSC-Heritability: paired units=150; median SD N750=0.0045; N5000=0.0042; median delta=-5.492e-04; 59.3% more stable at N5000; p=2.337e-05; q=3.506e-05.
+continuous | native_quantitative | LDSC-Genotype-Heritability: paired units=50; median SD N750=0.0481; N5000=0.0408; median delta=-0.0059; 64.0% more stable at N5000; p=0.3423; q=0.4401.
+continuous | native_quantitative | LDSC-Heritability: paired units=47; median SD N750=0.0000; N5000=0.0000; median delta=0.0000; 2.1% more stable at N5000; p=0.5930; q=0.6671.
+continuous | native_quantitative | LDAK-Precomputed-Heritability: paired units=266; median SD N750=0.0000; N5000=0.0000; median delta=0.0000; 0.4% more stable at N5000; p=1.0000; q=1.0000.
+
+OBSERVED-vs-LIABILITY SCALE AUDIT
+-------------------------------------------------------------------------------------------------------------------
+empirical empirical: matched units=765; rho(mean h2)=0.9428; rho(fold SD)=0.9686; median SD observed=0.1249; liability=0.3693.
+simulated N=750: matched units=4108; rho(mean h2)=0.9970; rho(fold SD)=0.9945; median SD observed=0.0570; liability=0.1643.
+simulated N=5000: matched units=4112; rho(mean h2)=0.9996; rho(fold SD)=0.9991; median SD observed=0.0149; liability=0.0434.
+
+MISSING-SCALE / EXCLUSION AUDIT
+-------------------------------------------------------------------------------------------------------------------
+empirical | liability_binary | missing_liability_h2:not_converted_missing_P: N=155
+empirical | liability_binary | missing_liability_h2:not_converted_missing_h2: N=29
+empirical | observed_binary | missing_native_h2: N=34
+simulated | liability_binary | missing_liability_h2:not_converted_missing_h2: N=2169
+simulated | native_quantitative | missing_native_h2: N=2146
+simulated | observed_binary | missing_native_h2: N=2169
+
+REVIEWER-FACING INTERPRETATION
+-------------------------------------------------------------------------------------------------------------------
+1. Point-estimate variation is NOT interpreted by itself as estimator failure or meaningful biological variation.
+2. Negative estimates are expected from unconstrained estimators when signal is weak relative to sampling variability; >1 estimates are retained as indicators of substantial uncertainty/model instability rather than biological h2 > 1.
+3. Every configuration-level estimate is accompanied by cross-fold stability metrics; these are descriptive because folds overlap.
+4. Estimator-native SE/CI are reported separately wherever the software provides them; no missing inferential SE/CI is fabricated.
+5. Explicit convergence information is separated from file/output missingness.
+6. The proportion of estimates below 0, within 0--1, and above 1 is reported on both observed and liability scales.
+7. Paired N=750 vs N=5000 simulation tests quantify how finite target sample size changes cross-fold stability while holding the underlying simulated trait/configuration pairing fixed.
+8. Formal configuration effects should be interpreted together with the exact one-factor Wilcoxon/BH-FDR analysis and the known-truth simulation analysis already reported elsewhere in the revision.

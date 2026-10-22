@@ -1,0 +1,23 @@
+METHOD 23 — PARTICIPANT OVERLAP RESULTS
+==========================================================================================
+
+Phenotypes with usable FAM files: 10/10
+Participants present in ALL analysed phenotypes: 728
+Unique participants in the UNION of phenotypes: 733
+Pairwise overlap relative to the smaller phenotype sample: 100.0% to 100.0%
+Pairwise Jaccard similarity: 0.9932 to 1.0000
+
+SELECTED ANALYTIC FAM FILES
+------------------------------------------------------------------------------------------
+Asthma: N=733; asthma_QC.fam
+BMI: N=728; body_mass_index_bmi_QC.fam
+Depression: N=733; depression_QC.fam
+GORD: N=733; gastro_oesophageal_reflux_gord_gastric_reflux_QC.fam
+High cholesterol: N=733; high_cholesterol_QC.fam
+Hypertension: N=733; hypertension_QC.fam
+Hypothyroidism: N=733; hypothyroidism_myxoedema_QC.fam
+IBS: N=733; irritable_bowel_syndrome_QC.fam
+Migraine: N=733; migraine_QC.fam
+Osteoarthritis: N=733; osteoarthritis_QC.fam
+
+No hypothesis test or FDR correction is applied because participant overlap is a descriptive property of the analytic samples.

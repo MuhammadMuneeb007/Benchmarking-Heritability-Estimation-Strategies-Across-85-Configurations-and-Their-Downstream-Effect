@@ -1,0 +1,12 @@
+Category,Factor,FactorLabel,CandidateGroups,MatchedComparisons,MatchedPairs,InputControlStatus
+1. DATA / PREPROCESSING,clumpprune,Clumping / pruning,29928,29928,6000,genotype_input_allowed_to_differ_by_design; GWAS_fingerprint_controlled
+1. DATA / PREPROCESSING,covariates,Covariate inclusion,20952,20952,20952,same_actual_input_SNP_count=20952/20952; GWAS_fingerprint_controlled
+1. DATA / PREPROCESSING,pca,PCA inclusion,20952,20952,20952,same_actual_input_SNP_count=20952/20952; GWAS_fingerprint_controlled
+1. DATA / PREPROCESSING,snp_set,SNP / variant-set choice,2865,2865,600,genotype_input_allowed_to_differ_by_design; GWAS_fingerprint_controlled
+2. ESTIMATOR / MODEL CONFIGURATION,algorithm,Estimation algorithm,23928,23928,23928,same_actual_input_SNP_count=23928/23928; GWAS_fingerprint_controlled
+2. ESTIMATOR / MODEL CONFIGURATION,grm_type,GRM construction,23928,23928,23928,same_actual_input_SNP_count=23928/23928; GWAS_fingerprint_controlled
+2. ESTIMATOR / MODEL CONFIGURATION,tagging_model,LDAK tagging / model assumption,2769,23459,18924,same_actual_input_SNP_count=17724/17724; GWAS_fingerprint_controlled
+3. INPUT / REFERENCE RESOURCE,grm_source,GRM source (e.g. GEMMA vs DPR),23856,23856,23856,same_actual_input_SNP_count=23856/23856
+3. INPUT / REFERENCE RESOURCE,reference_source,Reference strategy,0,0,0,no_valid_comparisons
+3. INPUT / REFERENCE RESOURCE,ld_reference,LDSC LD reference,0,0,0,no_valid_comparisons
+3. INPUT / REFERENCE RESOURCE,ld_weight,LDSC regression weights,0,0,0,no_valid_comparisons

@@ -1,0 +1,58 @@
+METHOD 20B — SIMULATION CONFIGURATION ACCURACY
+====================================================================================================
+
+Primary metric: MAE between the fold-averaged configuration estimate and the known simulated heritability.
+Lower MAE = closer to known truth. Binary simulations are excluded until liability-scale harmonization is completed.
+
+TOP 10 CONFIGURATIONS — N=750
+----------------------------------------------------------------------------------------------------
+1. LDSC | LDSC-Heritability | MAE=0.0378; median|error|=0.0186; bias=-0.0310; RMSE=0.0608; within 0.05=78.0%; coverage=100.0%
+2. LDAK-Calculated | LDAK-Calculated-Heritability||row=4 | MAE=0.0427; median|error|=0.0442; bias=0.0228; RMSE=0.0485; within 0.05=66.0%; coverage=100.0%
+3. LDAK-Calculated | LDAK-Calculated-Heritability||row=3 | MAE=0.0428; median|error|=0.0420; bias=0.0238; RMSE=0.0472; within 0.05=60.0%; coverage=100.0%
+4. LDAK-Calculated | LDAK-Calculated-Heritability||row=5 | MAE=0.0446; median|error|=0.0469; bias=0.0218; RMSE=0.0518; within 0.05=54.0%; coverage=100.0%
+5. LDAK-Calculated | LDAK-Calculated-Heritability||row=0 | MAE=0.0462; median|error|=0.0484; bias=0.0215; RMSE=0.0535; within 0.05=52.0%; coverage=100.0%
+6. GCTA | GCTA-Heritability||row=3 | MAE=0.0465; median|error|=0.0260; bias=0.0058; RMSE=0.0643; within 0.05=62.0%; coverage=100.0%
+7. LDAK-Calculated | LDAK-Calculated-Heritability||row=1 | MAE=0.0476; median|error|=0.0481; bias=0.0221; RMSE=0.0546; within 0.05=54.0%; coverage=100.0%
+8. LDAK-Calculated | LDAK-Calculated-Heritability||row=2 | MAE=0.0476; median|error|=0.0481; bias=0.0221; RMSE=0.0546; within 0.05=54.0%; coverage=100.0%
+9. LDAK-Calculated | LDAK-Calculated-Heritability||row=6 | MAE=0.0478; median|error|=0.0490; bias=0.0209; RMSE=0.0550; within 0.05=50.0%; coverage=100.0%
+10. GCTA | GCTA-Heritability||row=1 | MAE=0.0481; median|error|=0.0305; bias=0.0054; RMSE=0.0650; within 0.05=62.0%; coverage=100.0%
+
+TOP 10 CONFIGURATIONS — N=5000
+----------------------------------------------------------------------------------------------------
+1. GCTA | GCTA-Heritability||row=3 | MAE=0.0200; median|error|=0.0170; bias=0.0035; RMSE=0.0245; within 0.05=100.0%; coverage=100.0%
+2. GCTA | GCTA-Heritability||row=1 | MAE=0.0201; median|error|=0.0173; bias=0.0038; RMSE=0.0246; within 0.05=100.0%; coverage=100.0%
+3. GCTA | GCTA-Heritability||row=5 | MAE=0.0221; median|error|=0.0176; bias=0.0046; RMSE=0.0273; within 0.05=92.0%; coverage=100.0%
+4. Gemma1 | Gemma1-Heritability||row=22 | MAE=0.0247; median|error|=0.0165; bias=0.0076; RMSE=0.0430; within 0.05=96.0%; coverage=100.0%
+5. Gemma1 | Gemma1-Heritability||row=21 | MAE=0.0248; median|error|=0.0180; bias=0.0078; RMSE=0.0431; within 0.05=94.0%; coverage=100.0%
+6. DPR-Gemma | DPR-Gemma-Heritability||row=22 | MAE=0.0250; median|error|=0.0165; bias=0.0073; RMSE=0.0432; within 0.05=96.0%; coverage=100.0%
+7. DPR-Gemma | DPR-Gemma-Heritability||row=21 | MAE=0.0251; median|error|=0.0180; bias=0.0075; RMSE=0.0433; within 0.05=94.0%; coverage=100.0%
+8. Gemma1 | Gemma1-Heritability||row=23 | MAE=0.0318; median|error|=0.0205; bias=0.0074; RMSE=0.0576; within 0.05=86.0%; coverage=100.0%
+9. DPR-Gemma | DPR-Gemma-Heritability||row=23 | MAE=0.0321; median|error|=0.0214; bias=0.0071; RMSE=0.0578; within 0.05=86.0%; coverage=100.0%
+10. Gemma1 | Gemma1-Heritability||row=18 | MAE=0.0342; median|error|=0.0235; bias=-0.0161; RMSE=0.0532; within 0.05=80.0%; coverage=100.0%
+
+TOP 10 CONFIGURATIONS — OVERALL EQUAL-WEIGHTED ACROSS N
+----------------------------------------------------------------------------------------------------
+1. GCTA | GCTA-Heritability||row=3 | overall MAE=0.0332; MAE N750=0.0465; MAE N5000=0.0200; mean within 0.05=81.0%; mean fold SD=0.0444
+2. GCTA | GCTA-Heritability||row=1 | overall MAE=0.0341; MAE N750=0.0481; MAE N5000=0.0201; mean within 0.05=81.0%; mean fold SD=0.0422
+3. LDSC | LDSC-Heritability | overall MAE=0.0376; MAE N750=0.0378; MAE N5000=0.0373; mean within 0.05=78.0%; mean fold SD=0.0000
+4. GCTA | GCTA-Heritability||row=5 | overall MAE=0.0379; MAE N750=0.0537; MAE N5000=0.0221; mean within 0.05=76.0%; mean fold SD=0.0479
+5. LDAK-Calculated | LDAK-Calculated-Heritability||row=4 | overall MAE=0.0452; MAE N750=0.0427; MAE N5000=0.0478; mean within 0.05=62.0%; mean fold SD=0.0050
+6. LDAK-Calculated | LDAK-Calculated-Heritability||row=3 | overall MAE=0.0456; MAE N750=0.0428; MAE N5000=0.0485; mean within 0.05=61.0%; mean fold SD=0.0054
+7. LDAK-Calculated | LDAK-Calculated-Heritability||row=5 | overall MAE=0.0465; MAE N750=0.0446; MAE N5000=0.0483; mean within 0.05=54.0%; mean fold SD=0.0046
+8. LDAK-Calculated | LDAK-Calculated-Heritability||row=0 | overall MAE=0.0479; MAE N750=0.0462; MAE N5000=0.0495; mean within 0.05=53.0%; mean fold SD=0.0044
+9. Gemma1 | Gemma1-Heritability||row=23 | overall MAE=0.0480; MAE N750=0.0641; MAE N5000=0.0318; mean within 0.05=72.0%; mean fold SD=0.0559
+10. DPR-Gemma | DPR-Gemma-Heritability||row=23 | overall MAE=0.0481; MAE N750=0.0640; MAE N5000=0.0321; mean within 0.05=72.0%; mean fold SD=0.0563
+
+BEST CONFIGURATION WITHIN EACH METHOD
+----------------------------------------------------------------------------------------------------
+GCTA: GCTA-Heritability||row=3 | overall MAE=0.0332; N750=0.0465; N5000=0.0200
+LDSC: LDSC-Heritability | overall MAE=0.0376; N750=0.0378; N5000=0.0373
+LDAK-Calculated: LDAK-Calculated-Heritability||row=4 | overall MAE=0.0452; N750=0.0427; N5000=0.0478
+Gemma1: Gemma1-Heritability||row=23 | overall MAE=0.0480; N750=0.0641; N5000=0.0318
+DPR-Gemma: DPR-Gemma-Heritability||row=23 | overall MAE=0.0481; N750=0.0640; N5000=0.0321
+Gemma-LDSC: Gemma-LDSC-Heritability||row=0 | overall MAE=0.0753; N750=0.0678; N5000=0.0828
+Gemma2: Gemma2-Heritability||row=2 | overall MAE=0.1026; N750=0.1066; N5000=0.0985
+LDSC-Genotype: LDSC-Genotype-Heritability | overall MAE=0.3623; N750=0.3016; N5000=0.4230
+LDAK-Precomputed: LDAK-Precomputed-Heritability||row=1 | overall MAE=8.0550; N750=8.0550; N5000=8.0550
+
+IMPORTANT: configuration ranking is based on accuracy against known simulation truth, not on stability alone. A configuration can be very stable but systematically biased.

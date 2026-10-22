@@ -1,0 +1,30 @@
+\begin{table*}[!ht]
+\centering
+\caption{\textbf{Paired effect of target sample size on cross-fold stability in simulations.} The same underlying simulated trait and analytical configuration were paired between $N=750$ and $N=5{,}000$. Negative $\Delta$SD indicates lower cross-fold variability at the larger sample size. $q$ values are Benjamini--Hochberg adjusted within phenotype-type/scale analysis families.}
+\label{tab:simulation_stability_n}
+\scriptsize
+\begin{tabular}{lllrrrrr}
+\toprule
+Trait & Scale & Method & Pairs & Median SD $N=750$ & Median SD $N=5{,}000$ & More stable at $N=5{,}000$ (\%) & $q$ \\
+\midrule
+binary & Liability & DPR-GEMMA & 1176 & 0.245 & 0.062 & 91.8 & 7.47e-177 \\
+binary & Liability & GCTA & 300 & 0.225 & 0.055 & 92.7 & 1.92e-47 \\
+binary & Liability & GEMMA-LDSC & 150 & 0.011 & 0.007 & 77.3 & 1.10e-16 \\
+binary & Liability & GEMMA1 & 1200 & 0.248 & 0.063 & 92.2 & 7.93e-181 \\
+binary & Liability & GEMMA2 & 300 & 0.006 & 0.004 & 83.3 & 2.86e-28 \\
+binary & Liability & LDAK-Calc & 210 & 0.010 & 0.008 & 67.6 & 1.25e-11 \\
+binary & Liability & LDAK-Pre & 272 & 0.000 & 0.000 & 1.1 & 1.000 \\
+binary & Liability & LDSC-Genotype & 50 & 0.096 & 0.089 & 64.0 & 0.035 \\
+binary & Liability & LDSC & 47 & 0.000 & 0.000 & 4.3 & 0.202 \\
+continuous & Quantitative & DPR-GEMMA & 1176 & 0.098 & 0.024 & 97.1 & 3.12e-184 \\
+continuous & Quantitative & GCTA & 300 & 0.085 & 0.021 & 98.7 & 2.28e-50 \\
+continuous & Quantitative & GEMMA-LDSC & 150 & 0.005 & 0.004 & 59.3 & 3.51e-05 \\
+continuous & Quantitative & GEMMA1 & 1200 & 0.097 & 0.024 & 97.2 & 9.63e-188 \\
+continuous & Quantitative & GEMMA2 & 300 & 0.003 & 0.003 & 73.3 & 2.16e-10 \\
+continuous & Quantitative & LDAK-Calc & 189 & 0.007 & 0.004 & 66.7 & 2.10e-10 \\
+continuous & Quantitative & LDAK-Pre & 266 & 0.000 & 0.000 & 0.4 & 1.000 \\
+continuous & Quantitative & LDSC-Genotype & 50 & 0.048 & 0.041 & 64.0 & 0.440 \\
+continuous & Quantitative & LDSC & 47 & 0.000 & 0.000 & 2.1 & 0.667 \\
+\bottomrule
+\end{tabular}
+\end{table*}

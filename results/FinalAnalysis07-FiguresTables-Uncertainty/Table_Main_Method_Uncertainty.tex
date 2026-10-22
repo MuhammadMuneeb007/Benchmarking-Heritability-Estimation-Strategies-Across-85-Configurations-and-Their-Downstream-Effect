@@ -1,0 +1,32 @@
+\begin{table*}[!ht]
+\centering
+\caption{\textbf{Estimator-specific uncertainty and cross-fold stability in the empirical benchmark.} Binary-trait results are shown on the primary liability scale; BMI is shown on its native quantitative scale. Estimator-specific SE is the median software-reported SE across available folds. Cross-fold SD measures sensitivity to the overlapping training partitions and is not an inferential SE. Values outside $0\leq h^2\leq1$ were retained. LDpred2 did not provide estimator-specific SE in the parsed benchmark output.}
+\label{tab:uncertainty_main}
+\scriptsize
+\begin{tabular}{llrrrrrr}
+\toprule
+Scale & Method & N & Median $h^2$ & Median estimator SE & Median fold SD & $h^2<0$ (\%) & $h^2>1$ (\%) \\
+\midrule
+Liability & LDpred2 & 27 & 0.115 & NA & 0.004 & 11.1 & 0.0 \\
+Liability & GCTA & 54 & 0.830 & 2.433 & 0.694 & 0.0 & 33.3 \\
+Liability & GEMMA1 & 216 & 0.453 & 1.834 & 0.758 & 22.2 & 26.4 \\
+Liability & GEMMA2 & 48 & 0.135 & 0.065 & 0.002 & 0.0 & 6.2 \\
+Liability & GEMMA-LDSC & 24 & 0.157 & 0.116 & 0.004 & 16.7 & 12.5 \\
+Liability & DPR-GEMMA & 216 & 0.458 & 1.829 & 0.733 & 22.7 & 25.5 \\
+Liability & LDSC & 32 & 0.059 & 0.038 & 0.000 & 21.9 & 0.0 \\
+Liability & LDAK-Calc & 56 & 0.161 & 0.005 & 0.002 & 0.0 & 12.5 \\
+Liability & LDAK-Pre & 48 & 0.126 & 0.036 & 0.000 & 10.4 & 0.0 \\
+Liability & LDSC-Genotype & 8 & 0.066 & 0.027 & 0.011 & 25.0 & 12.5 \\
+Quantitative & LDpred2 & 4 & 0.179 & NA & 0.020 & 0.0 & 0.0 \\
+Quantitative & GCTA & 6 & 0.346 & 0.693 & 0.250 & 0.0 & 0.0 \\
+Quantitative & GEMMA1 & 24 & 0.154 & 0.449 & 0.208 & 20.8 & 0.0 \\
+Quantitative & GEMMA2 & 6 & 0.142 & 0.077 & 0.001 & 0.0 & 0.0 \\
+Quantitative & GEMMA-LDSC & 3 & 0.706 & 0.790 & 1.110 & 33.3 & 33.3 \\
+Quantitative & DPR-GEMMA & 24 & 0.154 & 0.449 & 0.208 & 20.8 & 0.0 \\
+Quantitative & LDSC & 4 & 0.119 & 0.023 & 7.76e-18 & 0.0 & 0.0 \\
+Quantitative & LDAK-Calc & 7 & 0.160 & 0.004 & 0.003 & 0.0 & 0.0 \\
+Quantitative & LDAK-Pre & 6 & 0.351 & 0.017 & 0.000 & 0.0 & 0.0 \\
+Quantitative & LDSC-Genotype & 1 & 0.041 & 0.016 & 0.013 & 0.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+\end{table*}

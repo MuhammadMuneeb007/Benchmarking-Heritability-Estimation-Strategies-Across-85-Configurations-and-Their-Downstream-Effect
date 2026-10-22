@@ -1,0 +1,133 @@
+DATA1 — REAL GWAS CASE/CONTROL INFORMATION
+========================================================================================================================
+
+Phenotype: asthma
+  Accession: GCST90018795
+  PMID: 34594039
+  DOI: NOT FOUND
+  Target: N=733, cases=115, controls=618, P=0.156889
+  Discovery GWAS: local N=449500, cases=38369, controls=411131, cases+controls=449500, P=0.085359
+  Case/control status: FOUND_EXACT_N_MATCH
+  Case/control source: PARSED_SAMPLE_TEXT
+  Case/control stage: 
+  Evidence: 38,369 European ancestry cases, 411,131 European ancestry controls
+  Catalog N - local N: 0
+  Common SNPs (asthma.gz vs asthma_QC.bim): 84303
+
+Phenotype: body_mass_index_bmi
+  Accession: GCST90018947
+  PMID: 34594039
+  DOI: NOT FOUND
+  Target: N=728, cases=, controls=, P=
+  Discovery GWAS: local N=359983, cases=, controls=, cases+controls=, P=
+  Case/control status: NOT_FOUND_IN_GWAS_CATALOG_API
+  Case/control source: 
+  Case/control stage: 
+  Evidence: 
+  Catalog N - local N: 
+  Common SNPs (body_mass_index_bmi.gz vs body_mass_index_bmi_QC.bim): 86190
+
+Phenotype: depression
+  Accession: NOT FOUND
+  PMID: NOT FOUND
+  DOI: NOT FOUND
+  Target: N=733, cases=114, controls=619, P=0.155525
+  Discovery GWAS: local N=322580, cases=, controls=, cases+controls=, P=
+  Case/control status: NOT_FOUND_IN_GWAS_CATALOG_API
+  Case/control source: 
+  Case/control stage: 
+  Evidence: 
+  Catalog N - local N: 
+  Common SNPs (depression.gz vs depression_QC.bim): 548721
+
+Phenotype: gastro_oesophageal_reflux_gord_gastric_reflux
+  Accession: GCST90018848
+  PMID: 34594039
+  DOI: NOT FOUND
+  Target: N=733, cases=45, controls=688, P=0.061392
+  Discovery GWAS: local N=467253, cases=32957, controls=434296, cases+controls=467253, P=0.070534
+  Case/control status: FOUND_EXACT_N_MATCH
+  Case/control source: PARSED_SAMPLE_TEXT
+  Case/control stage: 
+  Evidence: 32,957 European ancestry cases, 434,296 European ancestry controls
+  Catalog N - local N: 0
+  Common SNPs (gastro_oesophageal_reflux_gord_gastric_reflux.gz vs gastro_oesophageal_reflux_gord_gastric_reflux_QC.bim): 86545
+
+Phenotype: high_cholesterol
+  Accession: GCST90029021
+  PMID: 29892013
+  DOI: NOT FOUND
+  Target: N=733, cases=82, controls=651, P=0.111869
+  Discovery GWAS: local N=464736, cases=, controls=, cases+controls=, P=
+  Case/control status: NOT_FOUND_IN_GWAS_CATALOG_API
+  Case/control source: 
+  Case/control stage: 
+  Evidence: 
+  Catalog N - local N: 
+  Common SNPs (high_cholesterol.gz vs high_cholesterol_QC.bim): 572240
+
+Phenotype: hypertension
+  Accession: GCST90086092
+  PMID: 33893285
+  DOI: NOT FOUND
+  Target: N=733, cases=188, controls=545, P=0.256480
+  Discovery GWAS: local N=56637, cases=28391, controls=28246, cases+controls=56637, P=0.501280
+  Case/control status: FOUND_EXACT_N_MATCH
+  Case/control source: PARSED_SAMPLE_TEXT
+  Case/control stage: 
+  Evidence: 28,391 European ancestry cases, 28,246 European ancestry controls
+  Catalog N - local N: 0
+  Common SNPs (hypertension.gz vs hypertension_QC.bim): 81475
+
+Phenotype: hypothyroidism_myxoedema
+  Accession: GCST90018862
+  PMID: 34594039
+  DOI: NOT FOUND
+  Target: N=733, cases=70, controls=663, P=0.095498
+  Discovery GWAS: local N=320758, cases=1114, controls=379986, cases+controls=381100, P=0.002923
+  Case/control status: FOUND_BUT_N_MISMATCH
+  Case/control source: PARSED_SAMPLE_TEXT
+  Case/control stage: 
+  Evidence: 379,986 European ancestry controls, 1,114 East Asian ancestry cases
+  Catalog N - local N: 60342
+  Common SNPs (hypothyroidism_myxoedema.gz vs hypothyroidism_myxoedema_QC.bim): 86545
+
+Phenotype: irritable_bowel_syndrome
+  Accession: GCST90016564
+  PMID: 34741163
+  DOI: NOT FOUND
+  Target: N=733, cases=78, controls=655, P=0.106412
+  Discovery GWAS: local N=486601, cases=53400, controls=433201, cases+controls=486601, P=0.109741
+  Case/control status: FOUND_EXACT_N_MATCH
+  Case/control source: PARSED_SAMPLE_TEXT
+  Case/control stage: 
+  Evidence: 53,400 European ancestry cases, 433,201 European ancestry controls
+  Catalog N - local N: 0
+  Common SNPs (irritable_bowel_syndrome.gz vs irritable_bowel_syndrome_QC.bim): 572670
+
+Phenotype: migraine
+  Accession: GCST90043745
+  PMID: 34737426
+  DOI: NOT FOUND
+  Target: N=733, cases=53, controls=680, P=0.072306
+  Discovery GWAS: local N=456348, cases=1488, controls=454860, cases+controls=456348, P=0.003261
+  Case/control status: FOUND_EXACT_N_MATCH
+  Case/control source: PARSED_SAMPLE_TEXT
+  Case/control stage: 
+  Evidence: 1,488 European ancestry cases, 454,860 European ancestry controls
+  Catalog N - local N: 0
+  Common SNPs (migraine.gz vs migraine_QC.bim): 552347
+
+Phenotype: osteoarthritis
+  Accession: GCST90134279
+  PMID: 36411363
+  DOI: NOT FOUND
+  Target: N=733, cases=94, controls=639, P=0.128240
+  Discovery GWAS: local N=293819, cases=54039, controls=239780, cases+controls=293819, P=0.183919
+  Case/control status: FOUND_EXACT_N_MATCH
+  Case/control source: PARSED_SAMPLE_TEXT
+  Case/control stage: 
+  Evidence: 54,039 European ancestry cases, 239,780 European ancestry controls
+  Catalog N - local N: 0
+  Common SNPs (osteoarthritis.gz vs osteoarthritis_QC.bim): 1294
+

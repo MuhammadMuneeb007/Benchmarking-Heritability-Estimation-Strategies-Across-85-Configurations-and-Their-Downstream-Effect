@@ -1,0 +1,56 @@
+METHOD 20C — SIMULATION ACCURACY INFERENCE WITH BH-FDR
+====================================================================================================
+
+Formal hypothesis testing was performed on paired absolute errors against known truth.
+All pairwise Wilcoxon signed-rank tests within each analysis family were corrected using Benjamini-Hochberg FDR.
+The overall N analysis first averaged N=750 and N=5000 within the same underlying simulation scenario, avoiding treatment of nested sample sizes as independent traits.
+
+GLOBAL FRIEDMAN TESTS
+----------------------------------------------------------------------------------------------------
+configuration_N750: n=50, groups=78, chi2=1190.7465, p=3.875e-199, FDR q=7.75e-199
+configuration_N5000: n=50, groups=78, chi2=1546.8753, p=3.24e-272, FDR q=1.944e-271
+configuration_overall_equalN: n=50, groups=78, chi2=1417.8157, p=1.314e-245, FDR q=3.943e-245
+method_N750: n=50, groups=9, chi2=248.0268, p=4.513e-49, FDR q=4.513e-49
+method_N5000: n=50, groups=9, chi2=267.8556, p=2.806e-53, FDR q=4.209e-53
+method_overall_equalN: n=50, groups=9, chi2=259.9966, p=1.307e-51, FDR q=1.568e-51
+
+TOP CONFIGURATION — FDR-CORRECTED PAIRWISE SUPPORT
+----------------------------------------------------------------------------------------------------
+configuration_N750: LDSC | LDSC-Heritability | mean absolute error=0.0378; significantly more accurate than 72/77 comparators after BH-FDR; not significantly different from 5.
+configuration_N5000: GCTA | GCTA-Heritability||row=3 | mean absolute error=0.0200; significantly more accurate than 71/77 comparators after BH-FDR; not significantly different from 6.
+configuration_overall_equalN: GCTA | GCTA-Heritability||row=3 | mean absolute error=0.0332; significantly more accurate than 75/77 comparators after BH-FDR; not significantly different from 2.
+
+METHOD-LEVEL MEAN ABSOLUTE ERROR
+----------------------------------------------------------------------------------------------------
+method_N5000
+  LDSC: mean |error|=0.0373; median |error|=0.0186
+  LDAK-Calculated: mean |error|=0.0493; median |error|=0.0485
+  GCTA: mean |error|=0.0650; median |error|=0.0514
+  Gemma-LDSC: mean |error|=0.0831; median |error|=0.0611
+  Gemma1: mean |error|=0.0867; median |error|=0.0646
+  DPR-Gemma: mean |error|=0.0870; median |error|=0.0646
+  Gemma2: mean |error|=0.1427; median |error|=0.0851
+  LDSC-Genotype: mean |error|=0.4230; median |error|=0.4093
+  LDAK-Precomputed: mean |error|=15.0117; median |error|=10.9453
+method_N750
+  LDSC: mean |error|=0.0378; median |error|=0.0186
+  LDAK-Calculated: mean |error|=0.0456; median |error|=0.0454
+  Gemma-LDSC: mean |error|=0.0680; median |error|=0.0610
+  GCTA: mean |error|=0.0766; median |error|=0.0648
+  DPR-Gemma: mean |error|=0.1104; median |error|=0.0938
+  Gemma1: mean |error|=0.1106; median |error|=0.0937
+  Gemma2: mean |error|=0.1443; median |error|=0.0863
+  LDSC-Genotype: mean |error|=0.3016; median |error|=0.2828
+  LDAK-Precomputed: mean |error|=14.9969; median |error|=10.9453
+method_overall_equalN
+  LDSC: mean |error|=0.0376; median |error|=0.0186
+  LDAK-Calculated: mean |error|=0.0475; median |error|=0.0464
+  GCTA: mean |error|=0.0708; median |error|=0.0662
+  Gemma-LDSC: mean |error|=0.0756; median |error|=0.0596
+  Gemma1: mean |error|=0.0986; median |error|=0.0812
+  DPR-Gemma: mean |error|=0.0987; median |error|=0.0812
+  Gemma2: mean |error|=0.1435; median |error|=0.0857
+  LDSC-Genotype: mean |error|=0.3623; median |error|=0.3224
+  LDAK-Precomputed: mean |error|=15.0043; median |error|=10.9453
+
+Interpretation: Method20B provides the descriptive ranking; Method20C provides inferential support for differences in paired accuracy. FDR correction should be cited for Method20C and the exact one-factor matched analysis, not for the simple MAE ranking itself.

@@ -1,0 +1,22 @@
+ .gitignore                                         |   114 [32m+[m
+ CITATION.bib                                       |    10 [32m+[m
+ CITATION.cff                                       |    22 [32m+[m
+ FixBMI-LDpred2-Updated.py                          |   427 [32m+[m
+ FixBMI-PRSOnly.py                                  |   384 [32m+[m
+ GCTA-PRS-Final.py                                  |   363 [32m+[m
+ GCTA-RPS-Final-simulated-ALL.sh                    |   228 [32m+[m
+ GCTA-Real-ALL.sh                                   |   247 [32m+[m
+ LDpred-2-PRS-Final-cached.py                       |   423 [32m+[m
+ LDpred-2-PRS-Final-real-updated.py                 |   423 [32m+[m
+ LDpred2-PRS-Simulated-ALL.sh                       |   347 [32m+[m
+ LDpred2-Real-Updated-ALL.sh                        |   295 [32m+[m
+ README.md                                          |    10 [32m+[m
+ ldsc.yml                                           |   174 [32m+[m
+ leopard-sdm.yml                                    |   569 [32m+[m
+ requirements.txt                                   |     6 [32m+[m
+ .../FinalAnalysis04-XX_configuration_summary.csv   |  1213 [32m+[m
+ .../FinalAnalysis04-XX_method_summary.csv          |   142 [32m+[m
+ .../FinalAnalysis04-XX_units.csv                   | 26517 [32m+++++++++++++++++++[m
+ ...inalAnalysis04_simulated_InferentialSummary.csv |    32 [32m+[m
+ .../FinalAnalysis14_DecisionTable.csv              |    51 [32m+[m
+ 21 files changed, 31997 insertions(+)

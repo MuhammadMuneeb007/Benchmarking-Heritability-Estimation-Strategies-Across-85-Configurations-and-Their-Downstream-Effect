@@ -1,0 +1,77 @@
+METHOD 21 — MAIN MANUSCRIPT SUMMARY
+==========================================================================================
+
+Cross-fold SD/MAD/IQR/range are stability metrics only because CV training folds overlap.
+No inferential SE=fold_SD/sqrt(5) or fold-derived 95% CI is used.
+
+REAL-DATA STABILITY BY METHOD
+------------------------------------------------------------------------------------------
+LDAK-Precomputed: median SD=0.0000; MAD=0.0000; range=0.0000; SD<=0.05=100.0%; strict=100.0%; any negative=8.3%; any >1=0.0%.
+LDSC: median SD=0.0000; MAD=0.0000; range=0.0000; SD<=0.05=100.0%; strict=100.0%; any negative=17.5%; any >1=0.0%.
+Gemma2: median SD=0.0005; MAD=0.0003; range=0.0013; SD<=0.05=93.3%; strict=93.3%; any negative=0.0%; any >1=0.0%.
+LDAK-Calculated: median SD=0.0006; MAD=0.0003; range=0.0014; SD<=0.05=100.0%; strict=100.0%; any negative=0.0%; any >1=0.0%.
+Gemma-LDSC: median SD=0.0017; MAD=0.0007; range=0.0043; SD<=0.05=60.0%; strict=60.0%; any negative=40.0%; any >1=6.7%.
+LDSC-Genotype: median SD=0.0024; MAD=0.0016; range=0.0056; SD<=0.05=100.0%; strict=100.0%; any negative=20.0%; any >1=0.0%.
+GCTA: median SD=0.2436; MAD=0.0391; range=0.5361; SD<=0.05=18.3%; strict=18.3%; any negative=0.0%; any >1=0.0%.
+DPR-Gemma: median SD=0.2456; MAD=0.0923; range=0.5804; SD<=0.05=20.1%; strict=20.1%; any negative=36.9%; any >1=8.0%.
+Gemma1: median SD=0.2769; MAD=0.1192; range=0.6746; SD<=0.05=10.4%; strict=10.4%; any negative=39.9%; any >1=9.1%.
+
+CONTINUOUS SIMULATION — ACCURACY + STABILITY
+------------------------------------------------------------------------------------------
+LDSC N=750: MAE=0.0378; bias=-0.0310; RMSE=0.0608; median SD=0.0000; SD<=0.05=100.0%.
+LDAK-Calculated N=750: MAE=0.0456; bias=0.0222; RMSE=0.0522; median SD=0.0050; SD<=0.05=98.9%.
+Gemma-LDSC N=750: MAE=0.0680; bias=-0.0247; RMSE=0.0804; median SD=0.0045; SD<=0.05=100.0%.
+GCTA N=750: MAE=0.0766; bias=-0.0274; RMSE=0.1051; median SD=0.0850; SD<=0.05=14.7%.
+DPR-Gemma N=750: MAE=0.1104; bias=-0.0454; RMSE=0.1510; median SD=0.0976; SD<=0.05=15.7%.
+Gemma1 N=750: MAE=0.1106; bias=-0.0457; RMSE=0.1514; median SD=0.0974; SD<=0.05=15.8%.
+Gemma2 N=750: MAE=0.1443; bias=0.0888; RMSE=0.2494; median SD=0.0026; SD<=0.05=91.3%.
+LDSC-Genotype N=750: MAE=0.3016; bias=0.2998; RMSE=0.3376; median SD=0.0481; SD<=0.05=52.0%.
+LDAK-Precomputed N=750: MAE=14.9969; bias=7.0271; RMSE=26.8818; median SD=0.0000; SD<=0.05=100.0%.
+LDSC N=5000: MAE=0.0373; bias=-0.0311; RMSE=0.0604; median SD=0.0000; SD<=0.05=100.0%.
+LDAK-Calculated N=5000: MAE=0.0493; bias=0.0207; RMSE=0.0571; median SD=0.0043; SD<=0.05=100.0%.
+GCTA N=5000: MAE=0.0650; bias=-0.0517; RMSE=0.1047; median SD=0.0212; SD<=0.05=100.0%.
+Gemma-LDSC N=5000: MAE=0.0831; bias=-0.0440; RMSE=0.1014; median SD=0.0042; SD<=0.05=100.0%.
+Gemma1 N=5000: MAE=0.0867; bias=-0.0581; RMSE=0.1352; median SD=0.0239; SD<=0.05=90.8%.
+DPR-Gemma N=5000: MAE=0.0870; bias=-0.0584; RMSE=0.1352; median SD=0.0239; SD<=0.05=90.6%.
+Gemma2 N=5000: MAE=0.1427; bias=0.0822; RMSE=0.2472; median SD=0.0029; SD<=0.05=94.7%.
+LDSC-Genotype N=5000: MAE=0.4230; bias=0.3830; RMSE=0.4767; median SD=0.0408; SD<=0.05=64.0%.
+LDAK-Precomputed N=5000: MAE=15.0117; bias=6.8357; RMSE=26.8976; median SD=0.0000; SD<=0.05=100.0%.
+
+PAIRED SAMPLE-SIZE EFFECT (N=5000 minus N=750)
+------------------------------------------------------------------------------------------
+Negative delta SD = more stable at N=5000; negative delta |error| = more accurate at N=5000.
+DPR-Gemma: delta SD median=-0.0676, q=0.0000; delta |error| median=-0.0152, q=0.0000.
+GCTA: delta SD median=-0.0636, q=0.0000; delta |error| median=-0.0133, q=0.0000.
+Gemma-LDSC: delta SD median=-0.0005, q=0.0000; delta |error| median=0.0126, q=0.0000.
+Gemma1: delta SD median=-0.0667, q=0.0000; delta |error| median=-0.0156, q=0.0000.
+Gemma2: delta SD median=-0.0002, q=0.0000; delta |error| median=-0.0011, q=0.0188.
+LDAK-Calculated: delta SD median=-0.0007, q=0.0000; delta |error| median=0.0012, q=0.0000.
+LDAK-Precomputed: delta SD median=0.0000, q=1.0000; delta |error| median=0.0000, q=0.2780.
+LDSC: delta SD median=0.0000, q=0.5234; delta |error| median=0.0000, q=0.4652.
+LDSC-Genotype: delta SD median=-0.0059, q=0.4401; delta |error| median=0.0842, q=0.0000.
+
+STABILITY–ACCURACY ASSOCIATION
+------------------------------------------------------------------------------------------
+Positive rho means greater cross-fold instability tended to accompany larger absolute error.
+DPR-Gemma N=750: rho(SD,|error|)=0.5766, q=0.0000.
+DPR-Gemma N=5000: rho(SD,|error|)=0.4770, q=0.0011.
+GCTA N=750: rho(SD,|error|)=0.4095, q=0.0054.
+GCTA N=5000: rho(SD,|error|)=0.1458, q=0.3791.
+Gemma-LDSC N=750: rho(SD,|error|)=0.2605, q=0.0885.
+Gemma-LDSC N=5000: rho(SD,|error|)=0.4044, q=0.0055.
+Gemma1 N=750: rho(SD,|error|)=0.5776, q=0.0000.
+Gemma1 N=5000: rho(SD,|error|)=0.4669, q=0.0013.
+Gemma2 N=750: rho(SD,|error|)=0.8472, q=0.0000.
+Gemma2 N=5000: rho(SD,|error|)=0.8763, q=0.0000.
+LDAK-Calculated N=750: rho(SD,|error|)=-0.4391, q=0.0034.
+LDAK-Calculated N=5000: rho(SD,|error|)=-0.3787, q=0.0113.
+LDAK-Precomputed N=750: rho(SD,|error|)=NA, q=NA.
+LDAK-Precomputed N=5000: rho(SD,|error|)=-0.0369, q=0.8215.
+LDSC N=750: rho(SD,|error|)=0.0327, q=0.8215.
+LDSC N=5000: rho(SD,|error|)=0.1126, q=0.4945.
+LDSC-Genotype N=750: rho(SD,|error|)=0.4911, q=0.0008.
+LDSC-Genotype N=5000: rho(SD,|error|)=0.5769, q=0.0000.
+
+Strict descriptive stability (>=4 numerical folds, SD<=0.05, range<=0.15) was met by 345/843 evaluable real configuration-phenotype units (40.9%).
+An additional 11 units had fewer than four numerical folds and were treated as not evaluable for the stability flag rather than as unstable.
+This threshold is descriptive only; manuscript inference should emphasize continuous stability metrics.
